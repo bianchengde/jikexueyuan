@@ -1,0 +1,498 @@
+<%- include header %>
+	<!--Begin page-->
+	<div class="wrapper" id="wrapper">
+		<!--Top Bar Start-->
+		<div class="topbar">
+			<!--LOGO-->
+			<div class="topbar-left text-center">
+				<a class="logo" href="home.html">
+					<i class="icon-magnet icon-c-logo"></i>
+					<span>Ub<i class="md md-album"></i>ld</span>
+				</a>
+			</div>
+			<!-- Button mobile view to collapse sidebar menu -->
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="container">
+					<div class="pull-left">
+						<button class="button-menu-mobile open-left" onclick="reduceNav();">
+							<i class="ion-navicon"></i>
+						</button>
+						<span class="clearfix"></span>
+					</div>
+					<form role="search" class="navbar-left app-search pull-left hidden-xs">
+						<input type="text" placeholder="Search..." class="form-control" />
+						<a href="#">
+							<i class="fa fa-search"></i>
+						</a>
+					</form>
+					<ul class="nav navbar-nav pull-right">
+						<li class="dropdown hidden-xs">
+							<a href="#" class="waves-effect waves-light dropdown-toggle" data-toggle="dropdown">
+								<i class="icon-bell">
+										
+									</i>
+								<span class="badge-xs badge badge-danger">3</span>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+								<li class="notifi-title">
+									<span class="label label-default pull-right">New 3</span> 导航
+								</li>
+								<li class="list-group notification-list">
+									<a href="javascript:void(0);" class="list-group-item">
+										<div class="media">
+											<div class="pull-left p-r-10">
+												<em class="fa fa-diamond fa-2x text-primary"></em>
+											</div>
+											<div class="media-body">
+												<h5 class="media-heading">A new order has been placed A new order has been placed</h5>
+												<p class="m-0">
+													<small>There are new settings available</small>
+												</p>
+											</div>
+										</div>
+									</a>
+									<a href="javascript:void(0);" class="list-group-item">
+										<div class="media">
+											<div class="pull-left p-r-10">
+												<em class="fa fa-cog fa-2x text-custom"></em>
+											</div>
+											<div class="media-body">
+												<h5 class="media-heading">New settings</h5>
+												<p class="m-0">
+													<small>There are new settings available</small>
+												</p>
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="hidden-xs">
+							<a href="#" id="full-screen" class="waves-effect waves-light">
+								<i class="icon-size-fullscreen"></i>
+							</a>
+						</li>
+						<li class="hidden-xs">
+							<a href="#" class="waves-effect waves-light">
+								<i class="icon-settings"></i>
+							</a>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle profile" data-toggle="dropdown">
+								<img src="img/avatar-1.jpg" class="img-circle" />
+							</a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li>
+									<a href="javascript:void(0)">
+										<i class="ti-user m-r-5"></i> Profile
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)">
+										<i class="ti-settings m-r-5"></i> Settings
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)">
+										<i class="ti-lock m-r-5"></i> Lock screen
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)">
+										<i class="ti-power-off m-r-5"></i> Logout
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<!--Top Bar End-->
+		<!-- ========== Left Sidebar Start ========== -->
+		<div class="left side-menu">
+			<div id="sidebar-menu">
+				<ul>
+					<li class="text-muted menu-title">Navigation</li>
+					<li class="has_sub">
+						<a href="#" class="waves-effect">
+							<i class="ti-home"></i>
+							<span> 新闻管理 </span>
+						</a>
+						<ul>
+							<li>
+								<a href="/1">社会新闻</a>
+							</li>
+							<li>
+								<a href="/2">百家新闻</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- Left Sidebar End -->
+
+		<!-- ============================================================== -->
+		<!-- Start right Content here -->
+		<!-- ============================================================== -->
+		<div class="content-page">
+			<div class="content">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<h4 class="page-title">社会新闻</h4>
+							<ol class="breadcrumb">
+								<li>
+									<a href="#">新闻管理</a>
+								</li>
+								<li>
+									<% if(1 == newsType) { %>
+										<a href="/">社会新闻</a>
+										<% } else {%>
+											<a href="/2">百家新闻</a>
+											<% }%>
+								</li>
+							</ol>
+						</div>
+					</div>
+					<div class="panel">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="m-b-30">
+										<button id="addToTable" class="btn btn-default waves-effect waves-light">
+											Add
+											<i class="fa fa-plus"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div>
+								<table class="table table-striped" id="datatable-editable">
+									<thead>
+										<% titles.forEach(function (title, index) { %>
+											<td>
+												<%= title %>
+											</td>
+											<% }) %>
+									</thead>
+									<tbody>
+										<% result.forEach(function (item, index) { %>
+											<tr>
+												<td>
+													<%= item.id %>
+												</td>
+												<td>
+													<%= item.newsTitle %>
+												</td>
+												<td>
+													<%= item.newsImg %>
+												</td>
+												<td>
+													<%= item.newsContent %>
+												</td>
+												<td>
+													<% if (1 == item.recommend) { %>
+														是
+														<% } else{ %>
+															否
+															<% } %>
+												</td>
+												<td>
+													<a href='#' class='hidden on-editing save-row'><i class='fa fa-save'></i></a>
+													<a href='#' class='hidden on-editing cancel-row'><i class='fa fa-times'></i></a>
+													<a href='#' class='on-default edit-row'><i class='fa fa-pencil'></i></a>
+													<a href='#' class='on-default remove-row'><i class='fa fa-trash-o'></i></a>
+												</td>
+											</tr>
+											<% }) %>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 删除页面dialog -->
+		<div id="dialog" class="modal-block mfp-hide">
+			<form id="myform" action="/remove" method="post">
+				<section class="panel panel-info panel-color">
+					<header class="panel-heading">
+						<h2 class="panel-title">确定?</h2>
+					</header>
+					<div class="panel-body">
+						<div class="modal-wrapper">
+							<div class="modal-text">
+								<p>你确定要删除该条记录?</p>
+							</div>
+						</div>
+						<input type="text" name="id" id="editId2" style="display: none;" />
+						<div class="row m-t-20">
+							<div class="col-md-12 text-right">
+								<button id="dialogConfirm" type="submit" class="btn btn-primary waves-effect waves-light">确认</button>
+								<button id="dialogCancel" class="btn btn-default waves-effect">取消</button>
+							</div>
+						</div>
+					</div>
+				</section>
+			</form>
+		</div>
+		<!-- 新增页面dialog -->
+		<div id="myForm2" class="modal-block mfp-hide">
+			<section class="panel panel-info panel-color">
+				<header class="panel-heading">
+					<h2 class="panel-title">表单</h2>
+				</header>
+				<div class="panel-body">
+					<div class="modal-wrapper">
+						<form id="myform2" action="/add" enctype="multipart/form-data" method="post">
+							<div class="form-group">
+								<label>新闻标题</label>
+								<input type="text" class="form-control" name="newsTitle" />
+							</div>
+							<div class="form-group">
+								<label>新闻图片</label>
+								<input type="file" class="form-control" name="newsImg" id="newsImg" />
+							</div>
+							<div class="form-group">
+								<label>新闻内容</label>
+								<textarea class="form-control" name="newsContent" style="height: 208px;"></textarea>
+							</div>
+							<div class="form-group">
+								<div class="checkbox checkbox-primary">
+									<div class="col-xs-12" style="padding-left: 0px;padding-right: 0px;">
+										<input id="checkbox-signup" type="checkbox" name="recommend" value="1">
+										<label for="checkbox-signup"> 推荐 </label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label>新闻类型</label>
+								<select name="newsType" class="form-control">
+
+									<option value="1">社会</option>
+									<option value="2">百家</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<div class="row m-t-40">
+									<div class="col-md-12 text-right">
+										<button id="dialogConfirm2" type="button" class="btn btn-primary waves-effect waves-light">确认</button>
+										<button id="dialogCancel2" type="button" class="btn btn-default waves-effect">取消</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- 修改页面dialog -->
+		<div id="myForm3" class="modal-block mfp-hide">
+			<section class="panel panel-info panel-color">
+				<header class="panel-heading">
+					<h2 class="panel-title">表单</h2>
+				</header>
+				<div class="panel-body">
+					<div class="modal-wrapper">
+						<form id="myform3" method="post" action="/update">
+							<div class="form-group">
+								<label>新闻标题</label>
+								<input type="text" class="form-control" id="newsTitle" name="newsTitle" />
+							</div>
+							<div class="form-group">
+								<label>新闻内容</label>
+								<textarea class="form-control" name="newsContent" id="newsContent" style="height: 208px;"></textarea>
+							</div>
+							<div class="form-group">
+								<div class="checkbox checkbox-primary">
+									<div class="col-xs-12" style="padding-left: 0px;padding-right: 0px;">
+										<input type="checkbox" name="recommend" value="1" id="recommend">
+										<label for="checkbox-signup"> 推荐 </label>
+									</div>
+								</div>
+							</div>
+							<input type="text" name="id" id="editId" style="display: none;" />
+							<div class="form-group">
+								<label>新闻类型</label>
+								<select name="newsType" class="form-control">
+									<% if(1 == newsType) { %>
+										<option value="1" selected="selected">社会</option>
+										<option value="2">百家</option>
+										<% } else {%>
+											<option value="1">社会</option>
+											<option value="2" selected="selected">百家</option>
+											<% }%>
+								</select>
+							</div>
+							<div class="form-group">
+								<div class="row m-t-40">
+									<div class="col-md-12 text-right">
+										<button id="dialogConfirm3" type="button" class="btn btn-primary waves-effect waves-light">确认</button>
+										<button id="dialogCancel3" type="button" class="btn btn-default waves-effect">取消</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<script src="/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/waves.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/jquery.slimscroll.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/jquery.magnific-popup.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/jquery.dataTables.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/dataTables.bootstrap.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/datatables.editable.init.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/mindmup-editabletable.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/numeric-input-example.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		/*左侧导航栏样式变化*/
+		$(".has_sub>a").click(function() {
+			$(this).addClass("subdrop").parent().siblings().children('a').removeClass('subdrop');
+			$(this).siblings('ul').slideDown().parent().siblings().children('ul').slideUp();
+		});
+		$(".has_sub>ul>li>a").click(function() {
+			$(this).parent().parent().siblings('a').addClass("active").parent().siblings().children('a').removeClass('active');
+		});
+		$(window).resize(function() {
+			var screenWidth = $(window).width();
+			/*当页面宽度小于1008时候顶部导航栏变化*/
+			if (screenWidth < 1008) {
+				$("#wrapper").addClass("enlarged");
+				$(".has_sub ul").hide();
+			} else {
+				$("#wrapper").removeClass("enlarged");
+				$(".has_sub ul").show();
+			}
+		});
+		/*全屏点击事件*/
+		$("#full-screen").click(function() {
+			var elem = document.getElementById("wrapper");
+			var fullscreenEnabled = f_IsFullScreen();
+			if (fullscreenEnabled) {
+				exitFullscreen();
+			} else {
+				requestFullScreen(elem);
+			}
+		});
+
+		function f_IsFullScreen() {
+			return (document.body.scrollHeight == window.screen.height && document.body.scrollWidth == window.screen.width);
+		}
+		//退出全屏
+		function exitFullscreen() {
+			if (document.exitFullscreen) {
+				document.exitFullscreen();
+			} else if (document.mozCancelFullScreen) {
+				document.mozCancelFullScreen();
+			} else if (document.webkitExitFullscreen) {
+				document.webkitExitFullscreen();
+			}
+		}
+
+		function requestFullScreen(element) {
+			var requestMethod = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullScreen;
+			if (requestMethod) {
+				requestMethod.call(element);
+			} else if (typeof window.ActiveXObject !== "undefined") {
+				var wscript = new ActiveXObject("WScript.Shell");
+				if (wscript !== null) {
+					wscript.SendKeys("{F11}");
+				}
+			}
+		}
+		//页面跳转
+		function to_url(url) {
+			//重置高度
+			$("#centerRight").attr("height", 0);
+			//页面跳转
+			$("#centerRight").attr("src", url);
+		}
+		/*缩小顶部导航*/
+		function reduceNav() {
+			$("#wrapper").toggleClass("enlarged");
+		}
+		/*删除数据*/
+		$("#dialogConfirm").click(
+			function() {
+				$("#myform").submit();
+			}
+		);
+		//限制只能传图片
+		 function CheckType(obj) {
+		 	var isTrue=true;
+            if (obj.length > 0) {
+                var af = "jpg,bmp,gif,png";
+                if (eval_r("with(obj)if(!/" + af.split(",").join("|") + "/ig.test(substring(lastIndexOf('.')+1,length)))1;")) {
+                    alert("支持上传文件类型：\n" + af);
+                    isTrue = false;
+                } else {
+                    isTrue = true;
+                }
+            } else {
+                isTrue = false;
+            }
+            return isTrue;
+        }
+		/*新增数据*/
+		$("#dialogConfirm2").click(
+			function() {
+				var url = $("#newsImg").val().substring(12);
+				var result=CheckType(url);
+				console.log(result);
+				if(result)
+				{
+					/*var action = $("#myform2").attr("action");
+					var name=GetFileNameNoExt(url);
+					var ext=GetFileExt(url);
+					var time =new Date();
+					time=time.getFullYear()+""+(time.getMonth()+1)+""+time.getDate()+""+time.getHours()+""+time.getMinutes()+""+time.getSeconds();
+					url=name+time+ext;
+					$("#myform2").attr("action", action + "/" + url);
+					$("#myform2").submit();*/
+				}
+			}
+		);
+		/*更新数据*/
+		$("#dialogConfirm3").click(
+			function() {
+				$("#myform3").submit();
+			}
+		);
+		//页面初始化时候左边导航默认展开
+		$(function(){
+			$(".has_sub ul").show();
+		})
+		
+		//字符串逆转
+        function strturn(str) {
+            if (str != "") {
+            var str1 = "";
+            for (var i = str.length - 1; i >= 0; i--) {
+                str1 += str.charAt(i);
+            }
+            return (str1);
+            }
+        }
+		//取文件后缀名
+        function GetFileExt(filepath) {
+            if (filepath != "") {
+                var pos = "." + filepath.replace(/.+\./, "");
+                return pos;
+            }
+        }
+         //取文件名不带后缀
+        function GetFileNameNoExt(filepath) {
+            var pos = strturn(GetFileExt(filepath));
+            var file = strturn(filepath);
+            var pos1 =strturn( file.replace(pos, ""));
+            return pos1;
+        }
+	</script>
+	<%- include footer %>

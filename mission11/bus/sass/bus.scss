@@ -1,0 +1,111 @@
+@import "mixin","myreset","ie";
+
+
+$white: #fff;
+.base{
+    font-family: arial;
+    font-weight:bold;
+}
+li{
+    float: left;
+    width: 26px;
+    @extend .base;
+    overflow: hidden;
+    text-align: center;
+}
+.oh{
+    overflow: hidden;
+}
+.fl{
+    float: left;
+}
+.container{
+    width: 702px;
+    border: 1px solid ;
+    @include position-absolute($top:50%,$left:50%);
+    transform: translate(-50%,-50%);
+}
+.wrap{
+    @include ds-flex;
+    flex-flow: row;
+}
+.busNumber{
+    @include flex(2);
+    background-color: rgb(24, 117, 181);
+    text-align: center;
+}
+.number{
+    @extend .base;
+    font-size: 50px;
+    color: rgb(174, 45, 41);
+}
+.lu{
+    @extend .base;
+    font-size: 24px; 
+    padding-left: 10px;
+}
+.busInfo{
+    @include flex(5);
+    background-color: rgb(26, 84, 140);
+    @extend .base;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    @include ds-flex;
+    align-items: flex-end;
+}
+.left-info{
+    @include flex(1);
+    text-align: center;
+}
+
+.arrow {
+  width: 12px;
+  height: 10px;
+  background-color: $white;
+  @include position-relative($top:14px,$right:-45px);
+}
+
+.arrow {
+    &:after{
+      border: solid transparent;
+      content: ' ';
+      height: 0;
+      width: 0;
+      @include position-absolute($left:100%);  
+    }
+}
+
+.arrow{
+    &:after{
+      border-width: 9px;
+      border-left-color: $white;
+      top: -4px;
+    }
+}
+
+.arrow {
+    &:before{
+        border-width: 14px;
+        border-left-color: #333;
+        top: 10px;
+    }
+}
+
+.right-info{
+    font-size: 12px;
+    @include flex(1);
+    text-align: center;
+}
+.nextStation{
+    color: rgb(174, 45, 41);
+}
+.busDetail{
+    margin-top: 10px;
+    width: 702px;
+}
+.on{
+    color: rgb(24, 117, 181);
+}
+.next{
+    color: rgb(174, 45, 41);    
+}

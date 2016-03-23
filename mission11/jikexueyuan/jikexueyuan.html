@@ -1,0 +1,3412 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>极客学院</title>
+		<link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="css/jikexueyuan.css" />
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css"/>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<header>
+				<!--顶部-->
+				<div class="head  pvm">
+					<a href="http://www.jikexueyuan.com/">
+						<img src="img/logo.png" class="logo" alt="极客学院" />
+					</a>
+					<div class="search">
+						<input class="search__input" placeholder="课程、问答或WIKI" />
+						<input class="search__btn" type="submit" value=""/>
+						<div class="hotWords">
+							<a  class="mls hotWords__a"  href="http://search.jikexueyuan.com/course/?q=Android">Android</a>
+							<a  class="mls hotWords__a" href="http://search.jikexueyuan.com/course/?q=iOS">iOS</a>
+							<a  class="mls hotWords__a" href="http://search.jikexueyuan.com/course/?q=HTML5">HTML5</a>
+						</div>
+					</div>
+					<div class="loginbox fr">
+						<span class="loginbox__myMessage"></span>
+						<em class="pvn phm">|</em>
+						<a href="http://passport.jikexueyuan.com/connect/qq">
+							<span>QQ登录</span>
+						</a>
+						<em class="pvn phm">|</em>
+						<a href="http://passport.jikexueyuan.com/sso/login">
+							<span>登录</span>
+						</a>
+						<em class="pvn phm">|</em>
+						<a href="http://passport.jikexueyuan.com/sso/reg_phone">
+							<span>注册</span>
+						</a>
+					</div>
+				</div>
+			</header>
+			<div class="loading">
+				<div class="loading-length "></div>
+			</div>
+			<!--头部导航-->
+			<div class="nav">
+				<div class="nav__wrap">
+					<div class="navbox">
+						<a href="http://www.jikexueyuan.com/" class="navbox__link">首页</a>
+						<a href="http://www.jikexueyuan.com/course/" class="navbox__link">职业课程库</a>
+						<a href="http://www.jikexueyuan.com/path/" class="navbox__link">知识体系图</a>
+						<a href="http://ke.jikexueyuan.com/zhiye/" class="navbox__link">职业路径图</a>
+						<a href="http://wenda.jikexueyuan.com/" class="navbox__link">技术问答</a>
+						<a href="http://wiki.jikexueyuan.com/" class="navbox__link">WiKi</a>
+						<ul class="navpanel cf">
+							<li class="navpanel__item ptm fl">
+								<span class="navAngle"></span>
+								<ul class="item-box">
+									<li>
+										<a class="pan mrn item-box__link" href="http://www.jikexueyuan.com/course/">课程库</a>
+									</li>
+									<li>
+										<a class="pan mrn item-box__link" href="http://www.jikexueyuan.com/path/">知识体系图</a>
+									</li>
+									<li>
+										<a class="pan mrn item-box__link"  href="http://ke.jikexueyuan.com/zhiye/">职业路径图</a>
+									</li>
+									<li>
+										<a class="pan mrn item-box__link" href="http://ke.jikexueyuan.com/xilie/">系列课程</a>
+									</li>
+								</ul>
+							</li>
+							<li class="navpanel__item ptm fl">
+								<span class="navAngle"></span>
+								<ul class="item-box">
+									<li><a  class="pan mrn item-box__link" target="_blank" href="http://jiuye.jikexueyuan.com/train/web">Web前端开发</a></li>
+									<li><a  class="pan mrn item-box__link" target="_blank" href="http://jiuye.jikexueyuan.com/train/android">Android开发</a></li>
+									<li><a  class="pan mrn item-box__link" target="_blank" href="http://jiuye.jikexueyuan.com/train/javaweb">JavaWeb开发</a></li>
+								</ul>
+							</li>
+							<li class="navpanel__item ptm fl">
+								<span class="navAngle"></span>
+								<ul class="item-box">
+									<li><a class="pan mrn item-box__link" target="_blank" href="http://wiki.jikexueyuan.com">Wiki</a></li>
+									<li><a class="pan mrn item-box__link" target="_blank" href="http://wenda.jikexueyuan.com/">技术问答</a></li>
+									<li><a class="pan mrn item-box__link" target="_blank" href="http://qun.jikexueyuan.com">社群</a></li>
+									<li><a class="pan mrn item-box__link" target="_blank" href="http://download.jikexueyuan.com">资源分享</a></li>
+								</ul>
+							</li>
+							<li class="navpanel__item ptm fl">
+								<span class="navAngle"></span>
+								<ul class="item-box">
+									<li><a class="pan mrn item-box__link" target="_blank" href="http://mooc.jikexueyuan.com">高校合作</a></li>
+									<li><a class="pan mrn item-box__link" target="_blank" href="http://zhiye.jikexueyuan.com">极客人才联盟</a></li>
+									<li><a class="pan mrn item-box__link" target="_blank" href="http://press.jikexueyuan.com/evangelist/apply.html">布道师招募</a></li>
+									<li><a class="pan mrn item-box__link" target="_blank" href="http://jiuye.jikexueyuan.com/assistant/apply">兼职助教招募</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="user-need">
+						<a  class="pan mll user-need__link" href="http://www.jikexueyuan.com/vip/"><span class="user-need__text"><img  class="mrs fl user-need__img"  src="img/vip-icon.png"/>VIP会员</span></a>
+						<a  class="pan mll user-need__link" href="http://press.jikexueyuan.com/topic/"><span class="user-need__text"><img  class="mrs fl user-need__img" src="img/star-icon.png"/>求课程</span></a>
+						<a  class="pan mll user-need__link" href="http://www.jikexueyuan.com/app/"><span class="user-need__text"><img class="mrs fl user-need__img" src="img/dl-icon.png"/>客户端</span></a>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<div class="top mtl oh">
+					<!--顶部左侧导航-->
+					<div class="top-left fl">
+						<ul class="top-left__wrap">
+							<li>
+								<div class="left-classify-wrap">
+									<a href="http://www.jikexueyuan.com/course/mobile" class="left-title">移动开发</a>
+									<div class="left-inner">
+										<div>
+											<dl class="mhm mvn pan oh">
+												<dt class="left-inner__dt">
+													<a href="http://www.jikexueyuan.com/course/app">应用开发</a>
+												</dt>
+												<dd class="left-inner__dd">
+													<a href="http://www.jikexueyuan.com/course/android" class="left-inner__a">Android</a>
+													<a href="http://www.jikexueyuan.com/course/ios" class="left-inner__a">IOS</a>
+												</dd>
+											</dl>
+											<dl class="mhm mvn pan oh">
+												<dt class="left-inner__dt">
+					                            	<a href="http://www.jikexueyuan.com/course/games" >游戏开发</a>
+					                            </dt>
+												<dd class="cf left-inner__dd">
+													<a href="http://www.jikexueyuan.com/course/cocos" class="left-inner__a">Cocos</a>
+													<a href="http://www.jikexueyuan.com/course/unity3d" class="left-inner__a">Unity3D</a>
+													<a href="http://www.jikexueyuan.com/course/spritekit2d" class="left-inner__a">SpriteKit 2D</a>
+													<a href="http://www.jikexueyuan.com/course/unreal" class="left-inner__a">Unreal</a>
+												</dd>
+											</dl>
+											<dl class="mhm mvn pan oh">
+												<dt class="left-inner__dt">
+					                            	<a href="http://www.jikexueyuan.com/course/frame" >常用框架</a>
+					                            </dt>
+												<dd class="cf left-inner__dd">
+													<a href="http://www.jikexueyuan.com/course/cordova" class="left-inner__a">Cordova</a>
+													<a href="http://www.jikexueyuan.com/course/reactnative1" class="left-inner__a">React Native</a>
+												</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="left-classify-wrap">
+									<a href="http://www.jikexueyuan.com/course/web" class="left-title">前端开发</a>
+									<div class="left-inner">
+										<div>
+											<dl class="mhm mvn pan oh">
+												<dt class="left-inner__dt">
+													<a href="http://www.jikexueyuan.com/course/webbase">前端基础</a>
+												</dt>
+												<dd class="cf left-inner__dd">
+													<a href="http://www.jikexueyuan.com/course/html" class="left-inner__a">HTML</a>
+													<a href="http://www.jikexueyuan.com/course/css" class="left-inner__a">CSS</a>
+													<a href="http://www.jikexueyuan.com/course/javascript" class="left-inner__a">JavaScript</a>
+													<a href="http://www.jikexueyuan.com/course/html5" class="left-inner__a">HTML5</a>
+													<a href="http://www.jikexueyuan.com/course/css3" class="left-inner__a">CSS3</a>
+													<a href="http://www.jikexueyuan.com/course/prospective" class="left-inner__a">技术前瞻</a>
+												</dd>
+											</dl>
+											<dl class="mhm mvn pan oh">
+												<dt class="left-inner__dt">
+					                            	<a href="http://www.jikexueyuan.com/course/advance">前端进阶</a>
+					                            </dt>
+												<dd class="cf left-inner__dd">
+													<a href="http://www.jikexueyuan.com/course/typescript" class="left-inner__a">Typescript</a>
+													<a href="http://www.jikexueyuan.com/course/security" class="left-inner__a">前端安全</a>
+													<a href="http://www.jikexueyuan.com/course/pratice" class="left-inner__a">项目实战</a>
+												</dd>
+											</dl>
+											<dl class="mhm mvn pan oh">
+												<dt class="left-inner__dt">
+					                            	<a href="http://www.jikexueyuan.com/course/frame">前端框架</a>
+					                            </dt>
+												<dd class="cf left-inner__dd">
+													<a href="http://www.jikexueyuan.com/course/jquery" class="left-inner__a">jquery</a>
+													<a href="http://www.jikexueyuan.com/course/jqueryui" class="left-inner__a">jquery UI</a>
+													<a href="http://www.jikexueyuan.com/course/jquerymobile" class="left-inner__a">jquery Mobile</a>
+													<a href="http://www.jikexueyuan.com/course/angularjs" class="left-inner__a">AngularJs</a>
+													<a href="http://www.jikexueyuan.com/course/reactjs" class="left-inner__a">ReactJs</a>
+													<a href="http://www.jikexueyuan.com/course/bootstrap" class="left-inner__a">Bootstrap</a>
+													<a href="http://www.jikexueyuan.com/course/reactnative" class="left-inner__a">React Native</a>
+													<a href="http://www.jikexueyuan.com/course/backbone" class="left-inner__a">Backbone</a>
+													<a href="http://www.jikexueyuan.com/course/treejs" class="left-inner__a">Three.js</a>
+													<a href="http://www.jikexueyuan.com/course/mootools" class="left-inner__a">MooTool</a>
+													<a href="http://www.jikexueyuan.com/course/compass" class="left-inner__a">Compass</a>
+												</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="left-classify-wrap">
+									<a href="http://www.jikexueyuan.com/course/web" class="left-title">后端开发</a>
+									<div class="left-inner">
+										<div>
+											<dl class="mhm mvn pan oh">
+												<dt class="left-inner__dt">
+													<a href="http://www.jikexueyuan.com/course/webbase">Python</a>
+												</dt>
+												<dd class="cf left-inner__dd">
+													<a href="http://www.jikexueyuan.com/course/html" class="left-inner__a">Python 基础</a>
+													<a href="http://www.jikexueyuan.com/course/css" class="left-inner__a">web2py</a>
+													<a href="http://www.jikexueyuan.com/course/javascript" class="left-inner__a">Django</a>
+													<a href="http://www.jikexueyuan.com/course/html5" class="left-inner__a">Flask</a>
+												</dd>
+											</dl>
+											<dl class="mhm mvn pan oh">
+												<dt class="left-inner__dt">
+					                            	<a href="http://www.jikexueyuan.com/course/advance" >PHP</a>
+					                            </dt>
+												<dd class="cf left-inner__dd">
+													<a href="http://www.jikexueyuan.com/course/typescript"  class="left-inner__a">PHP 基础</a>
+													<a href="http://www.jikexueyuan.com/course/security"  class="left-inner__a">YII</a>
+													<a href="http://www.jikexueyuan.com/course/pratice"  class="left-inner__a">ThinkPHP</a>
+													<a href="http://www.jikexueyuan.com/course/pratice"  class="left-inner__a">Laravel</a>
+													<a href="http://www.jikexueyuan.com/course/pratice"  class="left-inner__a">WordPress</a>
+													<a href="http://www.jikexueyuan.com/course/pratice"  class="left-inner__a">Phalcon</a>
+													<a href="http://www.jikexueyuan.com/course/pratice"  class="left-inner__a">Apache</a>
+													<a href="http://www.jikexueyuan.com/course/pratice"  class="left-inner__a">Fackbook Hack</a>
+												</dd>
+											</dl>
+											<dl class="mhm mvn pan oh">
+												<dt class="left-inner__dt">
+					                            	<a href="http://www.jikexueyuan.com/course/frame">Node.js</a>
+					                            </dt>
+												<dd class="cf left-inner__dd">
+													<a href="http://www.jikexueyuan.com/course/jquery" class="left-inner__a">Node.js 基础</a>
+													<a href="http://www.jikexueyuan.com/course/jqueryui" class="left-inner__a">express</a>
+													<a href="http://www.jikexueyuan.com/course/jquerymobile" class="left-inner__a">Meteor</a>
+													<a href="http://www.jikexueyuan.com/course/angularjs" class="left-inner__a">Hexo</a>
+												</dd>
+											</dl>
+											<dl class="mhm mvn pan oh">
+												<dt class="left-inner__dt">
+					                            	<a href="http://www.jikexueyuan.com/course/frame">ASP.NET</a>
+					                            </dt>
+												<dd class="cf left-inner__dd">
+													<a href="http://www.jikexueyuan.com/course/jquery" class="left-inner__a">C#</a>
+													<a href="http://www.jikexueyuan.com/course/jqueryui" class="left-inner__a">ASP.NET MVC</a>
+													<a href="http://www.jikexueyuan.com/course/jquerymobile" class="left-inner__a">Entity Framework</a>
+													<a href="http://www.jikexueyuan.com/course/angularjs" class="left-inner__a">WPF</a>
+												</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="left-classify-wrap">
+									<a href="http://www.jikexueyuan.com/course/web" class="left-title">基础知识</a>
+									<div class="left-inner">
+										<div>
+											<dl class="mhm mvn pan oh">
+												<dt class="left-inner__dt">
+													<a href="http://www.jikexueyuan.com/course/webbase">基础语言</a>
+												</dt>
+												<dd class="cf left-inner__dd">
+													<a href="http://www.jikexueyuan.com/course/html" class="left-inner__a">C</a>
+													<a href="http://www.jikexueyuan.com/course/css" class="left-inner__a">C++</a>
+													<a href="http://www.jikexueyuan.com/course/javascript" class="left-inner__a">Objective-C</a>
+													<a href="http://www.jikexueyuan.com/course/html5" class="left-inner__a">Swift</a>
+													<a href="http://www.jikexueyuan.com/course/css3" class="left-inner__a">C#</a>
+													<a href="http://www.jikexueyuan.com/course/prospective" class="left-inner__a">Java</a>
+												</dd>
+											</dl>
+											<dl class="mhm mvn pan oh">
+												<dt class="left-inner__dt">
+					                            	<a href="http://www.jikexueyuan.com/course/advance" >计算机基础</a>
+					                            </dt>
+												<dd class="cf left-inner__dd">
+													<a href="http://www.jikexueyuan.com/course/typescript" class="left-inner__a">计算机组成原理</a>
+													<a href="http://www.jikexueyuan.com/course/security" class="left-inner__a">网络工程</a>
+													<a href="http://www.jikexueyuan.com/course/pratice" class="left-inner__a">Word</a>
+													<a href="http://www.jikexueyuan.com/course/pratice" class="left-inner__a">Excel</a>
+													<a href="http://www.jikexueyuan.com/course/pratice" class="left-inner__a">PowerPoint</a>
+												</dd>
+											</dl>
+											<dl class="mhm mvn pan oh">
+												<dt class="left-inner__dt">
+					                            	<a href="http://www.jikexueyuan.com/course/frame">开发基础</a>
+					                            </dt>
+												<dd class="cf left-inner__dd">
+													<a href="http://www.jikexueyuan.com/course/jquery" class="left-inner__a">算法基础</a>
+													<a href="http://www.jikexueyuan.com/course/jqueryui" class="left-inner__a">数据结构</a>
+													<a href="http://www.jikexueyuan.com/course/jquerymobile" class="left-inner__a">设计模式</a>
+													<a href="http://www.jikexueyuan.com/course/angularjs" class="left-inner__a">软件工程</a>
+												</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="left-classify-wrap">
+									<a href="http://www.jikexueyuan.com/course/web" class="left-title">云计算&大数据</a>
+									<div class="left-inner">
+										<div>
+											<dl class="mhm mvn pan oh">
+												<dt class="left-inner__dt">
+													<a href="http://www.jikexueyuan.com/course/webbase">云计算</a>
+												</dt>
+												<dd class="cf left-inner__dd">
+													<a href="http://www.jikexueyuan.com/course/html" class="left-inner__a">OpenStack</a>
+													<a href="http://www.jikexueyuan.com/course/css" class="left-inner__a">Docker</a>
+													<a href="http://www.jikexueyuan.com/course/javascript" class="left-inner__a">CloudStack</a>
+													<a href="http://www.jikexueyuan.com/course/html5" class="left-inner__a">Windows Azure</a>
+													<a href="http://www.jikexueyuan.com/course/css3">IaaS</a>
+												</dd>
+											</dl>
+											<dl class="mhm mvn pan oh">
+												<dt class="left-inner__dt">
+					                            	<a href="http://www.jikexueyuan.com/course/advance" >大数据</a>
+					                            </dt>
+												<dd class="cf left-inner__dd">
+													<a href="http://www.jikexueyuan.com/course/typescript" class="left-inner__a">Hadoop</a>
+													<a href="http://www.jikexueyuan.com/course/security" class="left-inner__a">Storm</a>
+													<a href="http://www.jikexueyuan.com/course/pratice" class="left-inner__a">Hive</a>
+													<a href="http://www.jikexueyuan.com/course/pratice" class="left-inner__a">Kafka</a>
+													<a href="http://www.jikexueyuan.com/course/pratice" class="left-inner__a">Hbase</a>
+													<a href="http://www.jikexueyuan.com/course/pratice" class="left-inner__a">Spark</a>
+													<a href="http://www.jikexueyuan.com/course/pratice" class="left-inner__a">信息检索</a>
+													<a href="http://www.jikexueyuan.com/course/pratice" class="left-inner__a">数据分析</a>
+												</dd>
+											</dl>
+											<dl class="mhm mvn pan oh">
+												<dt class="left-inner__dt">
+					                            	<a href="http://www.jikexueyuan.com/course/frame">虚拟化</a>
+					                            </dt>
+												<dd class="cf left-inner__dd">
+													<a href="http://www.jikexueyuan.com/course/jquery" class="left-inner__a">VMware</a>
+												</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!--头部当中导航-->
+					<div class="top-center mlm fl">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<a href="http://e.jikexueyuan.com/invite/invite.html?huodong=invite_shouye_banner" class="swiper-slide" style="background: url(img/1.jpg);"></a>
+								<a href="http://jiuye.jikexueyuan.com/train/web?huodong=jiuye_web_shouye_banner_0910" class="swiper-slide" style="background: url(img/2.jpg);"></a>
+								<a href="http://qun.jikexueyuan.com/activity/topic/146?huodong=shequn_shouye_banner_1203" class="swiper-slide" style="background: url(img/3.jpg);"></a>
+								<a href="http://qun.jikexueyuan.com/jikexueyuan/topic/147?huodong=huojiang_shouye_banner_1202" class="swiper-slide" style="background: url(img/4.jpg);"></a>
+								<a href="http://jiuye.jikexueyuan.com/train/javaweb?huodong=jiuye_javaweb_shouye_banner" class="swiper-slide" style="background: url(img/5.jpg);"></a>
+								<a href="http://jiuye.jikexueyuan.com/train/android?huodong=jiuye_android_shouye_banner" class="swiper-slide" style="background: url(img/6.jpg);"></a>
+							</div>
+							<!--分页器 -->
+							<div class="swiper-pagination"></div>
+							<!-- 导航按钮 -->
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+						<div class="focuswork-wrap swiper-container1 oh">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide fl focuswork-wrap__li">
+									<a href="#" class="fl focuswork-content">
+										<img src="img/android.png" class="lesson-icon focuswork-content__img" />
+										<p class="focuswork-content__lesson-title">Android开发工程师</p>
+										<p class="focuswork-content__lesson-intro man">挑战月薪2万的工作机会</p>
+									</a>
+								</li>
+								<li class="swiper-slide fl focuswork-wrap__li">
+									<a href="#" class="fl focuswork-content">
+										<img src="img/html.png" class="lesson-icon focuswork-content__img" />
+										<p class="focuswork-content__lesson-title">HTML5/Web前端工程师</p>
+										<p class="focuswork-content__lesson-intro">BAT大牛亲自授课</p>
+									</a>
+								</li>
+								<li class="swiper-slide fl focuswork-wrap__li">
+									<a href="#" class="fl focuswork-content">
+										<img src="img/java.jpg" class="lesson-icon focuswork-content__img" />
+										<p class="focuswork-content__lesson-title">JavaWeb开发工程师</p>
+										<p class="focuswork-content__lesson-intro">Java人才4个月极速进阶</p>
+									</a>
+								</li>
+								<li class="swiper-slide fl focuswork-wrap__li">
+									<a href="#" class="fl focuswork-content">
+										<img src="img/jiuye.jpg" class="lesson-icon focuswork-content__img" />
+										<p class="focuswork-content__lesson-title">极客学院就业班</p>
+										<p class="focuswork-content__lesson-intro">0基础 | 4个月 | 100%保就业</p>
+									</a>
+								</li>
+							</ul>
+							<div class="swiper-button-prev1"></div>
+							<div class="swiper-button-next1"></div>
+						</div>
+					</div>
+					<div class="top-right fl">
+						<div class="news mtm">
+							<h3 class="news__title">快讯</h3>
+							<a>
+								<p class="news_text">分享干货 赢壕奖”火热进行中！！</p>
+							</a>
+							<a>
+								<p class="news_text">极客阅读周”活动完美收官</p>
+							</a>
+							<a>
+								<p class="news_text">极客学院成功牵手二百多所高校</p>
+							</a>
+							<a>
+								<p class="news_text">极客学院斩获腾讯教育双料大奖</p>
+							</a>
+						</div>
+						<div class="userInfo">
+							<div class="head-box fl">
+								<img src="img/default.gif" class="head-box__image"/>
+							</div>
+							<div class="name-wrap fl">
+								<div class="hello-world">
+									<span class="hello-world__span">
+									Hi!你好
+									<p class="hello-world__p">欢迎来到极客学院</p>
+									</span>
+								</div>
+								<div class="operate">
+									<a href="javascript:;" class="login-btn fl mrm">登录</a>
+									<a href="javascript:;" class="login-btn--register fl mrm">注册</a>
+								</div>
+							</div>
+						</div>
+						<div class="oh recommend">
+							<ul id="recommend" class="oh">
+								<li id="content" class="recommend-title">
+									<span class="question icon"></span>
+									<span>问答</span>
+									<span class="angle-bottom"></span>
+								</li>
+								<li id="wiki"   class="recommend-title">
+									<span class="wiki icon"></span>
+									<span>wiki</span>
+									<span class="angle-bottom"></span>
+								</li>
+								<li id="lesson" class="recommend-title">
+									<span class="lesson icon"></span>
+									<span>课程</span>
+									<span class="angle-bottom"></span>
+								</li>
+								<li id="group" class="recommend-title">
+									<span class="group icon"></span>
+									<span>社群</span>
+									<span class="angle-bottom"></span>
+								</li>
+								<li class="recommend-title">
+									<span class="download icon"></span>
+									<span>下载</span>
+									<span></span>
+								</li>
+								<li class="recommend-title">
+									<span class="knowledge icon"></span>
+									<span>知识</span>
+									<span></span>
+								</li>
+								<li class="recommend-title">
+									<span class="job icon"></span>
+									<span>职业</span>
+									<span></span>
+								</li>
+								<li class="recommend-title">
+									<span class="vip icon"></span>
+									<span>vip</span>
+									<span></span>
+								</li>
+							</ul>
+							<div class="move-list" id="move-list">
+								<ul class="type-list cf">
+									<li class="move-list__title" id="recommend-content">问答</li>
+									<li class="move-list__title" id="recommend-wiki">wiki</li>
+									<li class="move-list__title" id="recommend-lesson">课程</li>
+									<li class="move-list__title" id="recommend-group">社群</li>
+								</ul>
+								<div>
+									<ul class="tab-content" id="tab-content">
+										<li>
+											<a href="http://wenda.jikexueyuan.com/question/26076/" class="tab-content__link">
+												<img src="img/recommend-html5.png" class="tab-content__img"/>
+												<span class="tab-content__text">【问答技巧】怎样提问才能让我的问题更快速被解答？</span>
+											</a>
+										</li>
+										<li>
+											<a href="http://wenda.jikexueyuan.com/question/27538/" class="tab-content__link">
+												<img src="img/recommend-b.png" class="tab-content__img" />
+												<span class="tab-content__text">Bootstrap 最新版 V4 中文文档</span>
+											</a>
+										</li>
+										<li>
+											<a href="http://wenda.jikexueyuan.com/question/28716/" class="tab-content__link">
+												<img src="img/recommend-mouse.png" class="tab-content__img" />
+												<span class="tab-content__text">【老师分享】对LPS的Manacher算法感兴趣的同学请</span>
+											</a>
+										</li>
+										<li>
+											<a href="http://wenda.jikexueyuan.com/question/28716/" class="tab-content__link">
+												<img src="img/games.png" class="tab-content__img"/>
+												<span class="tab-content__text">build_native.py时报错</span>
+											</a>
+										</li>
+										<li>
+											<a href="http://wenda.jikexueyuan.com/question/28716/" class="tab-content__link">
+												<img src="img/mobile.png" class="tab-content__img"/>
+												<span class="tab-content__text">超级菜鸟想成为怎么成长？</span>
+											</a>
+										</li>
+									</ul>
+									<div id="recommendwiki" class="recommendwiki">
+										<ul class="recommendwiki-wrap">
+											<li class="recommendwiki-wrap__content">
+												<a>
+													<img src="img/recommend-php.jpg"  class="recommendwiki-wrap__img"/>
+													<p class="recommendwiki-wrap__text">PHP 新手指南</p>
+												</a>
+											</li>
+											<li class="recommendwiki-wrap__content">
+												<a>
+													<img src="img/recommend-asp.jpg" class="recommendwiki-wrap__img"/>
+													<p class="recommendwiki-wrap__text">ASP.NET 编程指南</p>
+												</a>
+											</li>
+											<li class="recommendwiki-wrap__content">
+												<a>
+													<img src="img/recommend-resultful.jpeg" class="recommendwiki-wrap__img"/>
+													<p class="recommendwiki-wrap__text">RESTful Web 服务教程</p>
+												</a>
+											</li>
+										</ul>
+									</div>
+									<div id="recommendlesson" class="recommendlesson">
+										<ul class="lession cf pam">
+											<li class="recommendlesson-wrap">
+												<a href="http://www.jikexueyuan.com/path/html5/" class="recommendlesson-link">
+													<img src="img/recommend-lesson-html.png" class="recommendlesson-link__img" />
+													<p class="recommendlesson-link__text">HTML5开发</p>
+												</a>
+											</li>
+											<li class="recommendlesson-wrap">
+												<a href="http://www.jikexueyuan.com/path/android/" class="recommendlesson-link">
+													<img src="img/recommend-lesson-android.png" class="recommendlesson-link__img"/>
+													<p class="recommendlesson-link__text">Android</p>
+												</a>
+											</li>
+											<li class="recommendlesson-wrap">
+												<a href="http://www.jikexueyuan.com/path/cocos2d-x/" class="recommendlesson-link">
+													<img src="img/Cocos2d-x.png" class="recommendlesson-link__img" />
+													<p class="recommendlesson-link__text">Cocos2d-x游戏开发</p>
+												</a>
+											</li>
+											<li class="recommendlesson-wrap">
+												<a href="http://www.jikexueyuan.com/path/java/" class="recommendlesson-link">
+													<img src="img/recommend-java.png" class="recommendlesson-link__img" />
+													<p class="recommendlesson-link__text">Java语言</p>
+												</a>
+											</li>
+										</ul>
+									</div>
+									<div id="recommendGroup" class="recommendGroup">
+										<ul class="group  mhn">
+											<li class="cf pam group-wrap">
+												<img src="img/groupAndroid.png" alt="" class="fl mrm group-wrap__img">
+												<div class="group-info fl">
+													<p class="group-info__title group-info__text">Android工程师</p>
+													<p class="count group-info__text">已有<span>213</span>人加入</p>
+												</div>
+												<a href="http://qun.jikexueyuan.com/android" class="goupJoin" target="_blank">＋ 加入</a>
+											</li>
+											<li class="cf pam group-wrap">
+												<img src="img/grouplink.png" alt="" class="fl mrm group-wrap__img">
+												<div class="group-info fl">
+													<p class="group-info__title group-info__text">Web大前端工程师</p>
+													<p class="count group-info__text">已有<span>226</span>人加入</p>
+												</div>
+												<a href="http://qun.jikexueyuan.com/web" class="goupJoin" target="_blank">＋ 加入</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--热门课程-->
+				<div class="hot-lesson" id="hot-lesson">
+					<ul class="hot-lesson-wrap">
+						<li positionid="1" class="hot-lesson-content">热门推荐</li>
+						<li positionid="2" class="hot-lesson-content">最新课程</li>
+						<li positionid="3" class="hot-lesson-content">免费课程</li>
+						<li positionid="4" class="hot-lesson-content">项目实战</li>
+						<li positionid="5" class="hot-lesson-content">全球首发</li>
+						<li positionid="6" class="hot-lesson-content">企业合作</li>
+					</ul>
+				</div>
+				<div class="hot-lessonbox mtl">
+					<ul class="cf mtn hot-lessonbox-wrap" id="lesson1">
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson1.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										小说网站分布式爬虫的实现
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程接上一课的内容，从多线程的角度实现小说网站信息的采集、分析、存储等，在这个过程中重点介绍如何实现小说网站信息的分布式采集。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png"/>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson2.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										小说网站分布式爬虫的实现
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程接上一课的内容，从多线程的角度实现小说网站信息的采集、分析、存储等，在这个过程中重点介绍如何实现小说网站信息的分布式采集。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content"> 
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson3.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										小说网站分布式爬虫的实现
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程接上一课的内容，从多线程的角度实现小说网站信息的采集、分析、存储等，在这个过程中重点介绍如何实现小说网站信息的分布式采集。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson4.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										小说网站分布式爬虫的实现
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程接上一课的内容，从多线程的角度实现小说网站信息的采集、分析、存储等，在这个过程中重点介绍如何实现小说网站信息的分布式采集。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson5.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										小说网站分布式爬虫的实现
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程接上一课的内容，从多线程的角度实现小说网站信息的采集、分析、存储等，在这个过程中重点介绍如何实现小说网站信息的分布式采集。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson6.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										小说网站分布式爬虫的实现
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程接上一课的内容，从多线程的角度实现小说网站信息的采集、分析、存储等，在这个过程中重点介绍如何实现小说网站信息的分布式采集。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson7.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										小说网站分布式爬虫的实现
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程接上一课的内容，从多线程的角度实现小说网站信息的采集、分析、存储等，在这个过程中重点介绍如何实现小说网站信息的分布式采集。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson8.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										小说网站分布式爬虫的实现
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程接上一课的内容，从多线程的角度实现小说网站信息的采集、分析、存储等，在这个过程中重点介绍如何实现小说网站信息的分布式采集。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<ul class="cf hot-lessonbox-wrap" id="lesson2">
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson2-1.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson2-2.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info pam">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson2-3.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson2-4.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson2-5.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson2-6.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson2-7.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson2-8.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<ul class="cf hot-lessonbox-wrap" id="lesson3">
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson3-1.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson2-2.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson2-3.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson2-4.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson2-5.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson2-6.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson2-7.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson2-8.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<ul class="cf hot-lessonbox-wrap" id="lesson4">
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson4-1.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										Android 项目开发实战：图案解锁
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程讲解在 Android 上实现一个自定义的图案解锁用户控件，并利用这个自定义控件为应用添加图案解锁功能。该应用可以允许用户设置自己的解锁图案，然后就可以使用该图案进行解锁。应用使用自定义 View 实现基本点的显示与切换，使用 Canvas 实现界面的绘制。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson4-2.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson4-3.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson4-4.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson4-5.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson4-6.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson4-7.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson4-8.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<ul class="cf hot-lessonbox-wrap" id="lesson5">
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson5-1.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										Android 项目开发实战：图案解锁
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text"> 
+									本课程讲解在 Android 上实现一个自定义的图案解锁用户控件，并利用这个自定义控件为应用添加图案解锁功能。该应用可以允许用户设置自己的解锁图案，然后就可以使用该图案进行解锁。应用使用自定义 View 实现基本点的显示与切换，使用 Canvas 实现界面的绘制。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson5-2.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson5-3.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson5-4.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson4-5.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson4-6.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson4-7.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson4-8.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<ul class="cf hot-lessonbox-wrap" id="lesson6">
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson6-1.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										Android 项目开发实战：图案解锁
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程讲解在 Android 上实现一个自定义的图案解锁用户控件，并利用这个自定义控件为应用添加图案解锁功能。该应用可以允许用户设置自己的解锁图案，然后就可以使用该图案进行解锁。应用使用自定义 View 实现基本点的显示与切换，使用 Canvas 实现界面的绘制。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson6-2.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson6-3.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson6-4.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson4-5.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson4-6.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson4-7.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="hot-lessonbox-content">
+							<div class="lessonimg-box">
+								<a href="#">
+									<img src="img/lesson4-8.jpg" />
+								</a>
+								<div class="lessonplay">
+									<i class="playicon"></i>
+								</div>
+							</div>
+							<div class="lesson-info">
+								<h2 class="lesson-info-h2">
+									<a href="#">
+										数据的组织和整理——数据预处理（2）
+									</a>
+								</h2>
+								<p class="hot-lessonbox__text">
+									本课程主要介绍对缺失值的处理，包括发现数据中显式缺失值和隐含的缺失值，介绍在统计思维中缺失值的模式，介绍传统和现代的缺失值处理办法并加以评价。
+								</p>
+								<div class="timeandicon">
+									<div style="overflow: hidden;">
+										<dl class="timeandicon__content">
+											<dd class="mar-b8">
+												<i class="time-icon"></i>
+												<em>4课时 39分钟</em>
+											</dd>
+											<dd class="zhongji">
+												<i class="xinhao-icon3"></i>
+												<em>高级</em>
+											</dd>
+										</dl>
+										<em class="learn-number">2771人学习</em>
+									</div>
+									<div>
+										<div class="lessonicon-box">
+											<a href="http://www.jikexueyuan.com/course/lucene/">
+												<img src="img/lucene.png" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!--职业路径图-->
+				<div class="projectpath">
+					<div class="learn-way mtl">
+						<div class="learn-way-title cf">
+							<strong class="fl learn-way-title__strong">
+								<a href="http://ke.jikexueyuan.com/zhiye/" target="_blank">职业路径图</a>
+							</strong>
+							<i class="way fl">?</i>
+						</div>
+						<div class="learn-card cf" id="learn-card">
+							<a href="http://ke.jikexueyuan.com/zhiye/web/" class="learn-card__link">
+								<img src="img/learnway1.png" alt="WEB大前端工程师" class="learn-card__img" />
+								<h2>WEB大前端工程师</h2>
+								<p>月薪15k-30k</p>
+								<p>Web开发的未来趋势</p>
+								<button class="greenbtn2">立即学习</button>
+							</a>
+							<a href="http://ke.jikexueyuan.com/zhiye/android/" class="learn-card__link">
+								<img src="img/learnway2.png" alt="iOS开发工程师"  class="learn-card__img"/>
+								<h2>iOS开发工程师</h2>
+								<p>月薪5k-30k</p>
+								<p>最火爆的职业 人才缺口大</p>
+								<button class="greenbtn2">立即学习</button>
+							</a>
+							<a href="http://ke.jikexueyuan.com/zhiye/ios/" class="learn-card__link">
+								<img src="img/learnway3.png" alt="iOS开发工程师" class="learn-card__img"/>
+								<h2>iOS开发工程师</h2>
+								<p>月薪6k-30k</p>
+								<p>企业必争的人才资源</p>
+								<button class="greenbtn2">立即学习</button>
+							</a>
+							<a href="http://ke.jikexueyuan.com/zhiye/javaweb/" class="learn-card__link">
+								<img src="img/learnway4.png" alt="JavaWeb工程师" class="learn-card__img" />
+								<h2>JavaWeb工程师</h2>
+								<p>月薪6k-35k</p>
+								<p>就业面最广的职业方向</p>
+								<button class="greenbtn2">立即学习</button>
+							</a>
+							<a href="http://ke.jikexueyuan.com/zhiye/php/" class="learn-card__link">
+								<img src="img/learnway5.png" alt="PHP工程师"  class="learn-card__img"/>
+								<h2>PHP工程师</h2>
+								<p>月薪5k-35k</p>
+								<p>最好的开发语言 没有之一</p>
+								<button class="greenbtn2">立即学习</button>
+							</a>
+							<a href="http://ke.jikexueyuan.com/zhiye/cocos2d/" class="learn-card__link">
+								<img src="img/learnway6.png" alt="Cocos2d工程师" class="learn-card__img" />
+								<h2>Cocos2d工程师</h2>
+								<p>月薪7k-30k</p>
+								<p>最流行跨平台手机游戏开发</p>
+								<button class="greenbtn2">立即学习</button>
+							</a>
+							<a href="http://ke.jikexueyuan.com/zhiye/unity3d/" class="learn-card__link">
+								<img src="img/learnway7.png" alt="Unity3D工程师" class="learn-card__img" />
+								<h2>Unity3D工程师</h2>
+								<p>月薪7-40k</p>
+								<p>国际最热门的3D游戏引擎</p>
+								<button class="greenbtn2">立即学习</button>
+							</a>
+							<a href="http://ke.jikexueyuan.com/zhiye/aspnet/" class="learn-card__link">
+								<img src="img/learnway8.png" alt="ASP.NET工程师" class="learn-card__img" />
+								<h2>ASP.NET工程师</h2>
+								<p>月薪5k-30k</p>
+								<p>微软强力推行的开发语言</p>
+								<button class="greenbtn2">立即学习</button>
+							</a>
+							<a href="javascript:void(0)" class="learn-card__link">
+								<img src="img/learnway9.png" alt="大数据工程师" class="learn-card__img" />
+								<h2>大数据工程师</h2>
+								<p>月薪8K-40K</p>
+								<p>目前最稀缺的职业方向</p>
+								<button class="greenbtn2">立即学习</button>
+							</a>
+							<a href="javascript:void(0)" class="learn-card__link">
+								<img src="img/learnway10.png" alt="运维工程师" class="learn-card__img" />
+								<h2>运维工程师</h2>
+								<p>月薪6k-30k</p>
+								<p>最能折腾的职业岗位</p>
+								<button class="greenbtn2">立即学习</button>
+							</a>
+						</div>
+					</div>
+				</div>
+				<!--知识体系图-->
+				<div class="system">
+					<div class="system-wrap">
+						<div class="system-title cf">
+							<strong class="fl system-title__strong">
+								<a href="#">知识体系图</a>
+							</strong>
+							<i class="way fl">?</i>
+						</div>
+						<div class="system-box">
+							<div class="card-transform">
+								<a href="http://www.jikexueyuan.com/path/android/">
+									<div class="front">
+										<img src="img/system-android.png" class="front__img"/>
+										<h2 class="front__title">Android</h2>
+										<span class="front__text">90门课程</span>
+									</div>
+									<div class="back">
+										<strong class="back__strong">738774人已学习</strong>
+										<button class="greenbtn">立即学习</button>
+									</div>
+								</a>
+							</div>
+							<div class="card-transform">
+								<a href="">
+									<div class="front">
+										<img src="img/html.png" class="front__img" />
+										<h2 class="front__title">HTML5开发</h2>
+										<span class="front__text">116门课程</span>
+									</div>
+									<div class="back">
+										<strong class="back__strong">738774人已学习</strong>
+										<button class="greenbtn">立即学习</button>
+									</div>
+								</a>
+							</div>
+							<div class="card-transform">
+								<a href="">
+									<div class="front">
+										<img src="img/Java.png" class="front__img"/>
+										<h2 class="front__title">Java语言</h2>
+										<span class="front__text">45门课程</span>
+									</div>
+									<div class="back">
+										<strong class="back__strong">738774人已学习</strong>
+										<button class="greenbtn">立即学习</button>
+									</div>
+								</a>
+							</div>
+							<div class="card-transform">
+								<a href="">
+									<div class="front">
+										<img src="img/php.png" class="front__img"/>
+										<h2 class="front__title">PHP语言</h2>
+										<span class="front__text">26门课程</span>
+									</div>
+									<div class="back">
+										<strong class="back__strong">738774人已学习</strong>
+										<button class="greenbtn">立即学习</button>
+									</div>
+								</a>
+							</div>
+							<div class="card-transform">
+								<a href="">
+									<div class="front">
+										<img src="img/javaweb.jpg" class="front__img" />
+										<h2 class="front__title">JavaWeb</h2>
+										<span class="front__text">64门课程</span>
+									</div>
+									<div class="back">
+										<strong class="back__strong">738774人已学习</strong>
+										<button class="greenbtn">立即学习</button>
+									</div>
+								</a>
+							</div>
+							<div class="card-transform">
+								<a href="">
+									<div class="front">
+										<img src="img/ios.png" class="front__img"/>
+										<h2 class="front__title">iOS开发</h2>
+										<span class="front__text">51门课程</span>
+									</div>
+									<div class="back">
+										<strong class="back__strong">738774人已学习</strong>
+										<button class="greenbtn">立即学习</button>
+									</div>
+								</a>
+							</div>
+							<div class="card-transform">
+								<a href="">
+									<div class="front">
+										<img src="img/c.png" class="front__img" />
+										<h2 class="front__title">C语言</h2>
+										<span class="front__text">30门课程</span>
+									</div>
+									<div class="back">
+										<strong class="back__strong">738774人已学习</strong>
+										<button class="greenbtn">立即学习</button>
+									</div>
+								</a>
+							</div>
+							<div class="card-transform">
+								<a href="">
+									<div class="front">
+										<img src="img/python.png" class="front__img"/>
+										<h2 class="front__title">Python</h2>
+										<span class="front__text">59门课程</span>
+									</div>
+									<div class="back">
+										<strong class="back__strong">738774人已学习</strong>
+										<button class="greenbtn">立即学习</button>
+									</div>
+								</a>
+							</div>
+							<div class="card-transform">
+								<a href="">
+									<div class="front">
+										<img src="img/unity3d.png" class="front__img" />
+										<h2 class="front__title">Unity3D</h2>
+										<span class="front__text">61门课程</span>
+									</div>
+									<div class="back">
+										<strong class="back__strong">738774人已学习</strong>
+										<button class="greenbtn">立即学习</button>
+									</div>
+								</a>
+							</div>
+							<div class="card-transform">
+								<a href="">
+									<div class="front">
+										<img src="img/swift.png" class="front__img" />
+										<h2 class="front__title">Swift语言</h2>
+										<span class="front__text">61门课程</span>
+									</div>
+									<div class="back">
+										<strong class="back__strong">738774人已学习</strong>
+										<button class="greenbtn">立即学习</button>
+									</div>
+								</a>
+							</div>
+							<div class="card-transform">
+								<a href="">
+									<div class="front">
+										<img src="img/asp.png"  class="front__img"/>
+										<h2 class="front__title">Asp.Net</h2>
+										<span class="front__text">61门课程</span>
+									</div>
+									<div class="back">
+										<strong class="back__strong">738774人已学习</strong>
+										<button class="greenbtn">立即学习</button>
+									</div>
+								</a>
+							</div>
+							<div class="card-transform">
+								<a href="">
+									<div class="front">
+										<img src="img/studio.png"  class="front__img"/>
+										<h2 class="front__title">C#</h2>
+										<span class="front__text">30门课程</span>
+									</div>
+									<div class="back">
+										<strong class="back__strong">738774人已学习</strong>
+										<button class="greenbtn">立即学习</button>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--精品系列课程-->
+				<div class="excellent">
+					<div class="excellent-wrap cf">
+						<div class="excellent-title cf">
+							<strong class="fl excellent-title__strong">
+								<a href="#">精品系列课程</a>
+							</strong>
+							<i class="way fl">?</i>
+						</div>
+						<div class="excellent-content cf mtl">
+							<div class="excellent-card ">
+								<h2>ThinkPHP 项目开发实战</h2>
+								<div class="images">
+									<img src="img/excellent1.jpg" />
+								</div>
+								<div class="other">
+									<span>8门</span>
+									<span>54659人学习</span>
+									<div class="collect">
+										<span class="collect__text">收藏</span>
+									</div>
+								</div>
+								<div class="describe">
+									<div class="picture">
+										<a href="http://my.jikexueyuan.com/3635290469" target="_blank">
+											<img src="img/desc1.jpeg" />
+										</a>
+									</div>
+									<div class="name">
+										<a href="http://my.jikexueyuan.com/3635290469" target="_blank">jinqibu</a>
+									</div>
+									<div class="text">
+										<a href="http://ke.jikexueyuan.com/xilie/8" target="_blank" class="text__link">
+											通过本课程的学习，理解ThinkPHP 3.2的核心原理、设计思想，掌握框架的各项知识，最终能熟练运用TP框架快速开发功能完备、健壮的Web应用。
+										</a>
+									</div>
+									<a href="http://ke.jikexueyuan.com/xilie/8" target="_blank" class="greenbtn btn">马上学习</a>
+								</div>
+							</div>
+							<div class="excellent-card">
+								<h2>Axure从入门到精通系列课程</h2>
+								<div class="images">
+									<img src="img/desc2.jpg" />
+								</div>
+								<div class="other">
+									<span>8门</span>
+									<span>54659人学习</span>
+									<div class="collect">
+										<span class="collect__text">收藏</span>
+									</div>
+								</div>
+								<div class="describe">
+									<div class="picture">
+										<a href="http://my.jikexueyuan.com/3635290469" target="_blank">
+											<img src="img/excellent2.jpeg" />
+										</a>
+									</div>
+									<div class="name">
+										<a href="http://my.jikexueyuan.com/3635290469" target="_blank">jinqibu</a>
+									</div>
+									<div class="text">
+										<a href="http://ke.jikexueyuan.com/xilie/8" target="_blank" class="text__link">
+											通过本课程的学习，理解ThinkPHP 3.2的核心原理、设计思想，掌握框架的各项知识，最终能熟练运用TP框架快速开发功能完备、健壮的Web应用。
+										</a>
+									</div>
+									<a href="http://ke.jikexueyuan.com/xilie/8" target="_blank" class="greenbtn btn">马上学习</a>
+								</div>
+							</div>
+							<div class="excellent-card">
+								<h2>Flask实战</h2>
+								<div class="images">
+									<img src="img/desc3.jpg" />
+								</div>
+								<div class="other">
+									<span>8门</span>
+									<span>54659人学习</span>
+									<div class="collect">
+										<span class="collect__text">收藏</span>
+									</div>
+								</div>
+								<div class="describe">
+									<div class="picture">
+										<a href="http://my.jikexueyuan.com/3635290469" target="_blank">
+											<img src="img/excellent3.gif" />
+										</a>
+									</div>
+									<div class="name">
+										<a href="http://my.jikexueyuan.com/3635290469" target="_blank">jinqibu</a>
+									</div>
+									<div class="text">
+										<a href="http://ke.jikexueyuan.com/xilie/8" target="_blank" class="text__link">
+											通过本课程的学习，理解ThinkPHP 3.2的核心原理、设计思想，掌握框架的各项知识，最终能熟练运用TP框架快速开发功能完备、健壮的Web应用。
+										</a>
+									</div>
+									<a href="http://ke.jikexueyuan.com/xilie/8" target="_blank" class="greenbtn btn">马上学习</a>
+								</div>
+							</div>
+							<div class="excellent-card">
+								<h2>Redis</h2>
+								<div class="images">
+									<img src="img/desc4.jpg" />
+								</div>
+								<div class="other">
+									<span>8门</span>
+									<span>54659人学习</span>
+									<div class="collect">
+										<span class="collect__text">收藏</span>
+									</div>
+								</div>
+								<div class="describe">
+									<div class="picture">
+										<a href="http://my.jikexueyuan.com/3635290469" target="_blank">
+											<img src="img/excellent4.jpeg" />
+										</a>
+									</div>
+									<div class="name">
+										<a href="http://my.jikexueyuan.com/3635290469" target="_blank">jinqibu</a>
+									</div>
+									<div class="text">
+										<a href="http://ke.jikexueyuan.com/xilie/8" target="_blank" class="text__link">
+											通过本课程的学习，理解ThinkPHP 3.2的核心原理、设计思想，掌握框架的各项知识，最终能熟练运用TP框架快速开发功能完备、健壮的Web应用。
+										</a>
+									</div>
+									<a href="http://ke.jikexueyuan.com/xilie/8" target="_blank" class="greenbtn btn">马上学习</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="wiki cf">
+					<div class="wiki-wrap cf">
+						<div class="wiki-title cf">
+							<strong class="fl">
+								<a href="http://wiki.jikexueyuan.com/" target="_blank">Wiki</a>
+							</strong>
+							<i class="way fl">?</i>
+						</div>
+						<div class="wiki-box">
+							<div class="one-wiki">
+								<h2>推荐</h2>
+								<div class="wiki-img">
+									<dl class="cf">
+										<dd>
+											<a href="http://wiki.jikexueyuan.com/project/php/?hmsr=www_index_wiki">
+												<div class="imgbox">
+													<i class="look"></i>
+													<img src="img/php.jpg" class="fengmian" />
+													<h3>PHP 新手指南</h3>
+													<span class="wiki-box__text">137页/32章</span>
+												</div>
+
+											</a>
+										</dd>
+										<dd>
+											<a href="http://wiki.jikexueyuan.com/project/asp-net/?hmsr=www_index_wiki">
+												<div class="imgbox">
+													<i class="look"></i>
+													<img src="img/asp.net.jpg" class="fengmian" />
+													<h3>ASP.NET 编程指南</h3>
+													<span class="wiki-box__text">232页/35章</span>
+												</div>
+
+											</a>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<div class="wiki-box">
+							<div class="one-wiki">
+								<h2>推荐</h2>
+								<div class="wiki-img">
+									<dl class="cf">
+										<dd>
+											<a href="http://wiki.jikexueyuan.com/project/android-training-geek/?hmsr=www_index_wiki">
+												<div class="imgbox">
+													<i class="look"></i>
+													<img src="img/Android.jpg" class="fengmian" />
+													<h3>Android官方培训课程</h3>
+													<span class="wiki-box__text">2015/12/08</span>
+												</div>
+
+											</a>
+										</dd>
+										<dd>
+											<a href="http://wiki.jikexueyuan.com/project/laravel-5.1/?hmsr=www_index_wiki">
+												<div class="imgbox">
+													<i class="look"></i>
+													<img src="img/laravel.jpg" class="fengmian" />
+													<h3>Laravel 5.1 中文版</h3>
+													<span class="wiki-box__text">2015/11/11</span>
+												</div>
+											</a>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<div class="wiki-box">
+							<div class="one-wiki">
+								<h2>推荐</h2>
+								<div class="wiki-img">
+									<dl class="cf">
+										<dd>
+											<a href="http://wiki.jikexueyuan.com/project/material-design/?hmsr=www_index_wiki">
+												<div class="imgbox">
+													<i class="look"></i>
+													<img src="img/material.jpg" class="fengmian" />
+													<h3>Material Design </h3>
+													<span class="wiki-box__text">362141 人学习</span>
+												</div>
+
+											</a>
+										</dd>
+										<dd>
+											<a href="http://wiki.jikexueyuan.com/project/swift/?hmsr=www_index_wiki">
+												<div class="imgbox">
+													<i class="look"></i>
+													<img src="img/swiftbook.jpg" class="fengmian" />
+													<h3>Swift 2.0 教程</h3>
+													<span class="wiki-box__text">234800 人学习</span>
+												</div>
+
+											</a>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--合作企业-->
+				<div class="enterprise">
+					<div class="enterprise-box cf">
+						<div class="enterprise-title"><strong></strong>
+							<a href=""></a>
+						</div>
+						<div class="strategy pal">
+							<div class="swiper-container2 swiper-strategy">
+								<div class="swiper-wrapper">
+									<a class="swiper-slide  strategy__link">
+										<img src="img/jizhiyun.png" class="strategy__img" />
+									</a>
+									<a class="swiper-slide strategy__link">
+										<img src="img/chukong.jpg" class="strategy__img"/>
+									</a>
+									<a class="swiper-slide strategy__link">
+										<img src="img/micsoft.jpg" class="strategy__img"/>
+									</a>
+									<a class="swiper-slide strategy__link">
+										<img src="img/qingyun.jpg" class="strategy__img"/>
+									</a>
+									<a class="swiper-slide strategy__link">
+										<img src="img/daocloud.png" class="strategy__img"/>
+									</a>
+								</div>
+								<!-- 导航按钮 -->
+								<div class="swiper-button-prev2"></div>
+								<div class="swiper-button-next2"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--底部-->
+				<div class="footer">
+					<div class="jkinfo-block">
+						<div class="jkinfo cf">
+							<dl class="jkinfo__list">
+								<dt>
+									<a href="http://www.jikexueyuan.com/course/">极客学院</a>
+								</dt>
+								<dd>
+									·<a href="http://www.jikexueyuan.com/course/">职业课程库</a>
+								</dd>
+								<dd>
+									·<a href="http://www.jikexueyuan.com/path/">知识体系图</a>
+								</dd>
+								<dd>
+									·<a href="http://ke.jikexueyuan.com/zhiye/">职业路径图</a>
+								</dd>
+								<dd>
+									·<a href="http://www.jikexueyuan.com/partner/">企业课程</a>
+								</dd>
+								<dd>
+									·<a href="http://www.jikexueyuan.com/resources/">资源下载</a>
+								</dd>
+								<dd>
+									·<a href="http://www.jikexueyuan.com/tag/">课程标签</a>
+								</dd>
+							</dl>
+							<dl class="jkinfo__list">
+								<dt>
+									<a href="http://www.jikexueyuan.com/course/">网站服务</a>
+								</dt>
+								<dd>
+									·<a href="http://www.jikexueyuan.com/course/">课程需求</a>
+								</dd>
+								<dd>
+									·<a href="http://www.jikexueyuan.com/path/">免费体验VIP</a>
+								</dd>
+								<dd>
+									·<a href="http://ke.jikexueyuan.com/zhiye/">黑板报</a>
+								</dd>
+								<dd>
+									·<a href="http://www.jikexueyuan.com/partner/">网站地图</a>
+								</dd>
+							</dl>
+							<dl class="jkinfo__list">
+								<dt>
+									<a href="http://www.jikexueyuan.com/course/">帮助中心</a>
+								</dt>
+								<dd>
+									·<a href="http://www.jikexueyuan.com/course/">技术问答</a>
+								</dd>
+								<dd>
+									·<a href="http://www.jikexueyuan.com/path/">VIP权益</a>
+								</dd>
+								<dd>
+									·<a href="http://ke.jikexueyuan.com/zhiye/">常见问题</a>
+								</dd>
+								<dd>
+									·<a href="http://www.jikexueyuan.com/partner/">服务条款</a>
+								</dd>
+							</dl>
+							<dl class="jkinfo__list">
+								<dt>
+									<a href="http://www.jikexueyuan.com/course/">交流合作</a>
+								</dt>
+								<dd>
+									·<a href="http://www.jikexueyuan.com/course/">关于我们</a>
+								</dd>
+								<dd>
+									·<a href="http://www.jikexueyuan.com/path/">联系我们</a>
+								</dd>
+								<dd>
+									·<a href="http://ke.jikexueyuan.com/zhiye/">社会招聘</a>
+								</dd>
+								<dd>
+									·<a href="http://www.jikexueyuan.com/partner/">布道师招募</a>
+								</dd>
+								<dd>
+									·<a href="http://www.jikexueyuan.com/partner/">合作咨询</a>
+								</dd>
+								<dd>
+									·<a href="http://www.jikexueyuan.com/partner/">友情链接</a>
+								</dd>
+								<dd>
+									·<a href="http://www.jikexueyuan.com/partner/">极客助教招募</a>
+								</dd>
+							</dl>
+							<div class="search-share fl">
+								<strong>极客学院,编程是一种信仰!</strong>
+								<div class="app-dowmload  pln">
+									<a target="_blank" href="http://www.jikexueyuan.com/app/">
+										<img  class="fl app-dowmload__img" src="img/phone.png" />
+										<strong class="app-dowmload__strong">手机客户端</strong>
+										<p class="app-dowmload__text">离线缓存 随时学习</p>
+									</a>
+								</div>
+								<div class="share cf">
+									<a class="mrm" href="http://weibo.com/jikexueyuan" target="_blank"></a>
+									<a class="mrm" href="http://tieba.baidu.com/f?kw=%BC%AB%BF%CD%D1%A7%D4%BA&fr=index" target="_blank"></a>
+									<a class="mrm" href="javascript:void(0);">
+										<img src="img/saoma.png" />
+									</a>
+								</div>
+								<div class="kefu">
+									<a  class="pls" href="https://chat.meiqia.com/widget/desktop/index.html?unitid=7594&win=max&ol=auto&color=initial&specifyGr=0&cookie=006600144857949445690282&_realref_=http%3A%2F%2Fwww.jikexueyuan.com%2F">
+										<div class="kefu-icon fl"></div>
+										<h5>联系我们</h5>
+										<p class="pls">工作日9:00-21:00在线</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--版权-->
+					<div class="copyright pal">
+						Copyright &copy; 2013-2015
+						<strong><a href="http://www.jikexueyuan.com/" target="_blank">极客学院</a></strong>&nbsp;
+						<strong><a href="http://www.jikexueyuan.com/" target="_blank">jikexueyuan.com</a></strong>&nbsp; All Rights Reversed. 京ICP备11018032号-8 京公网安备11010802013056
+					</div>
+				</div>
+
+			</div>
+			<div class="pewm" id="pewm">
+				<a href="javascript:void(0);" id="close">
+					<i class="close"></i>
+				</a>
+				<a href="http://jiuye.jikexueyuan.com/train/web?huodong=jiuye_web_floating2_1015" target="_blank">
+					<img src="img/fixed1.png" class="fixed1" />
+				</a>
+			</div>
+			<div class="gotop">
+				<a href="#"><span class="gotop-top"></span></a>
+				<a href="/app/">
+					<span class="jk-app">
+						<div class="appewm"></div>
+					</span>
+				</a>
+				<a href="http://www.sojump.com/jq/5450574.aspx" class="diaocha" target="_blank"></a>
+				<a href="https://chat.meiqia.com/widget/desktop/index.html?unitid=7594&win=max&ol=auto&color=initial&specifyGr=0&cookie=006600144985081603437235&_realref_=http%3A%2F%2Fwww.jikexueyuan.com%2F" class="qq-online"></a>
+			</div>
+		</div>
+
+		<script src="js/sea.js"></script>
+		<script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			seajs.config({
+				base: "./js/"
+			});
+			seajs.use("main");
+			$("#content").hover(function(){
+				$("#move-list").show();
+				$("#recommend").hide();
+				$("#tab-content").show();
+			});
+			$("#wiki").hover(function(){
+				$("#move-list").show();
+				$("#recommend").hide();
+				$("#recommendwiki").show();
+			});
+			$("#lesson").hover(function(){
+				$("#move-list").show();
+				$("#recommend").hide();
+				$("#recommendlesson").show();
+			});
+			$("#group").hover(function(){
+				$("#move-list").show();
+				$("#recommend").hide();
+				$("#recommendGroup").show();
+			});
+			/*标题*/
+			$("#recommend-content").hover(function(){
+				$("#tab-content").show();
+				$("#recommendwiki").hide();
+				$("#recommendlesson").hide();
+				$("#recommendGroup").hide();
+				$(this).css("color","#35b558").siblings().css("color","#333");
+			},function(){
+				$("#move-list").hide();
+				$("#recommend").show();
+			});
+			$("#recommend-wiki").hover(function(){
+				$("#tab-content").hide();
+				$("#recommendwiki").show();
+				$("#recommendlesson").hide();
+				$("#recommendGroup").hide();
+				$(this).css("color","#35b558").siblings().css("color","#333");
+			},function(){
+				$("#move-list").hide();
+				$("#recommend").show();
+			});
+			$("#recommend-lesson").hover(function(){
+				$("#tab-content").hide();
+				$("#recommendwiki").hide();
+				$("#recommendlesson").show();
+				$("#recommendGroup").hide();
+				$(this).css("color","#35b558").siblings().css("color","#333");
+			},function(){
+				$("#move-list").hide();
+				$("#recommend").show();
+			});
+			$("#recommend-group").hover(function(){
+				$("#tab-content").hide();
+				$("#recommendwiki").hide();
+				$("#recommendlesson").hide();
+				$("#recommendGroup").show();
+				$(this).css("color","#35b558").siblings().css("color","#333");
+			},function(){
+				$("#move-list").hide();
+				$("#recommend").show();
+			});
+			/*内容*/
+			$("#tab-content").hover(function(){
+				$("#move-list").show();
+				$("#recommend").hide();
+				$("#recommend-content").css("color","#35b558").siblings().css("color","#333");
+			},function(){
+				$("#move-list").hide();
+				$("#recommend").show();
+			});
+			$("#recommendwiki").hover(function(){
+				$("#move-list").show();
+				$("#recommend").hide();
+				$("#recommend-wiki").css("color","#35b558").siblings().css("color","#333");
+			},function(){
+				$("#move-list").hide();
+				$("#recommend").show();
+			});
+			$("#recommendlesson").hover(function(){
+				$("#move-list").show();
+				$("#recommend").hide();
+				$("#recommend-lesson").css("color","#35b558").siblings().css("color","#333");
+			},function(){
+				$("#move-list").hide();
+				$("#recommend").show();
+			});
+			$("#recommendGroup").hover(function(){
+				$("#move-list").show();
+				$("#recommend").hide();
+				$("#recommend-group").css("color","#35b558").siblings().css("color","#333");
+			},function(){
+				$("#move-list").hide();
+				$("#recommend").show();
+			});
+			
+			$(".hot-lessonbox li").hover(function(){
+				$(this).find("p").slideDown();
+			},function(){
+				$(this).find("p").slideUp();
+			});
+			$(".search__input").focus(function(){
+				$(".hotWords").hide();
+			});
+			$(".search__input").blur(function(){
+				$(".hotWords").show();
+			});
+		</script>
+	</body>
+
+</html>

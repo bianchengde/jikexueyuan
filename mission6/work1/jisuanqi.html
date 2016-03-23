@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>计算器</title>
+		<link rel="stylesheet" href="css/jisuanqi.css" />
+	</head>
+	<body>
+		<div class="container">
+			<table cellspacing="0" id="animation">
+				<tbody>
+					<tr>
+						<td class="result" id="result" colspan="4">0</td>
+					</tr>
+					<tr>
+						<td onmousedown="down(this);" onmouseup="jisuan(this);" >sin</td>
+						<td onmousedown="down(this);" onmouseup="jisuan(this);">cos</td>
+						<td onmousedown="down(this);" onmouseup="jisuan(this);">√</td>
+						<td class="right"  onmousedown="down(this);" onmouseup="jisuan(this);">←</td>
+					</tr>
+					<tr>
+						<td  onmousedown="down(this);" onmouseup="jisuan(this);">c</td>
+						<td  onmousedown="down(this);" onmouseup="jisuan(this);">+/-</td>
+						<td  onmousedown="down(this);" onmouseup="jisuan(this);">%</td>
+						<td class="right"  onmousedown="down(this);" onmouseup="jisuan(this);">÷</td>
+					</tr>
+					<tr>
+						<td  onmousedown="down(this);" onmouseup="jisuan(this);">7</td>
+						<td  onmousedown="down(this);" onmouseup="jisuan(this);">8</td>
+						<td  onmousedown="down(this);" onmouseup="jisuan(this);">9</td>
+						<td class="right" onmousedown="down(this);" onmouseup="jisuan(this);">×</td>
+					</tr>
+					<tr>
+						<td  onmousedown="down(this);" onmouseup="jisuan(this);">4</td>
+						<td  onmousedown="down(this);" onmouseup="jisuan(this);">5</td>
+						<td  onmousedown="down(this);" onmouseup="jisuan(this);">6</td>
+						<td class="right"  onmousedown="down(this);" onmouseup="jisuan(this);">-</td>
+					</tr>
+					<tr>
+						<td  onmousedown="down(this);" onmouseup="jisuan(this);">1</td>
+						<td  onmousedown="down(this);" onmouseup="jisuan(this);">2</td>
+						<td  onmousedown="down(this);" onmouseup="jisuan(this);">3</td>
+						<td class="right"  onmousedown="down(this);" onmouseup="jisuan(this);">+</td>
+					</tr>
+					<tr>
+						<td colspan="2"  onmousedown="down(this);" onmouseup="jisuan(this);">0</td>
+						<td onmousedown="down(this);" onmouseup="jisuan(this);">.</td>
+						<td class="right" onmousedown="down(this);" onmouseup="jisuan(this);">=</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<script src="js/fudian.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="js/jisuanqi.js"></script>
+	</body>
+
+</html>

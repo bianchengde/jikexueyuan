@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>PSD作业</title>
+		<link rel="stylesheet" type="text/css" href="css/psd.css"/>
+		<style type="text/css">
+			.f-wrap{
+					height: 359px;
+  					background: url(img/f_wrap.jpg) repeat-x left top;
+  					padding: 50px 0 0;
+  					font-family: "Microsoft Yahei";
+				}
+				.footer{
+					width: 960px;
+					margin: 0 auto;
+				}
+				.link p a{
+					  display: inline-block;
+  					  color: #fcfcfa;
+  					  line-height: 40px;
+  					  padding-right: 36px;
+				}
+				.more{
+					display: block;
+  					background: #fff6e9;
+				    width: 107px;
+				    height: 17px;
+				    line-height: 17px;
+				    color: #9c7553;
+				    font-weight: normal;
+				    padding-left: 12px;
+				    font-size: 12px;
+				    margin-top: 10px;
+				}
+				.f-nav{
+					width: 270px;
+					padding-left: 100px;
+				}
+				.f-nav p a{
+					  display: inline-block;
+					  color: #fcfcfa;
+					  line-height: 40px;
+					  padding-right: 55px;
+				}
+				.f-cp ul{
+					color: #d7c2ad;
+				}
+				.f-cp li{
+					margin-bottom: 18px;
+				}
+		</style>
+	</head>
+
+	<body>
+		<script src="js/jquery-1.11.1.js"></script>
+		<script src="js/unslider.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			$(document).ready(function(e) {
+				/*轮播*/
+			    var unslider04 = $('#b04').unslider({
+					dots: true,
+					speed: 1000,
+					delay: 4000
+				}),
+				data04 = unslider04.data('unslider');
+				
+				$('.unslider-arrow04').click(function() {
+			        var fn = this.className.split(' ')[1];
+			        data04[fn]();
+			    });
+			    /*轮播end*/
+			   /*产品展示*/
+			   	$('#pro-title1').hover(
+			   		function(){
+			   			$('#list1').show();
+			   			$('#list3').hide();
+			   			$('#list2').hide();
+			   		}
+			   	);
+			   	$('#pro-title2').hover(
+			   		function(){
+			   			$('#list1').hide();
+			   			$('#list3').hide();
+			   			$('#list2').show();
+			   		}
+			   	);
+			   	$('#pro-title3').hover(
+			   		function(){
+			   			$('#list1').hide();
+			   			$('#list2').hide();
+			   			$('#list3').show();
+			   		}
+			   	);
+			   	/*产品展示end*/
+			});
+		</script>
+		<!--头部-->
+		<div class="header">
+			<!--头部上半部分-->
+			<div class="h-top">
+				<div class="h-top-nav">
+					<div class="top-nav-right fr">
+						<a href="http://223.4.245.119/" title="经销商入口" target="_blank">经销商入口</a>|
+						<a href="/cjwd.html" title="常见问答" target="_blank">常见问答</a>|
+						<a href="javascript:void(0);" title="加入收藏">加入收藏</a>|
+						<a href="http://mail.hmzm.cn" title="企业邮箱" target="_blank">企业邮箱</a>|
+						<a href="/sitemap.html" class="wb" title="网站地图">网站地图</a>|
+						<a href="http://www.hmzm.cn/eng/index.asp" title="ENGLISH" target="_blank" style="color:red;">ENGLISH</a>
+					</div>
+					<select class="fr">
+						<option>豪迈在线商城</option>
+						<option>阿里巴巴店铺</option>
+						<option>天猫店铺</option>
+					</select>
+				</div>
+			</div>
+			<!--头部当中部分-->
+			<div class="h-mid">
+				<div class="h-mid-nav">
+					<div class="log fl">
+						<a href="#">
+							<img src="img/title.gif" />
+						</a>
+					</div>
+					<div class="phone fr">
+						豪迈服务热线
+						<em>400-850-6277</em>
+					</div>
+				</div>
+			</div>
+			<!--头部底部-->
+			<div class="h-bottom">
+				<ul class="bottom-nav">
+					<li>
+						<img src="img/title2.gif" />
+					</li>
+					<li><a href="http://www.hmzm.cn/" title="豪迈首页">豪迈首页</a></li>
+					<li><a href="http://www.hmzm.cn/jyxle.html" title="LED吸顶灯">LED吸顶灯</a></li>
+					<li><a href="http://www.hmzm.cn/product/" title="产品中心">产品中心</a></li>
+					<li><a href="http://www.hmzm.cn/kt/kt_1.html" title="家居照明解决方案">家居照明解决方案</a></li>
+					<li><a href="http://www.hmzm.cn/zsjm.html" title="招商加盟">招商加盟</a></li>
+					<li><a href="http://www.hmzm.cn/hmoem.html" title="OEM">OEM</a></li>
+					<li><a href="http://www.hmzm.cn/hmjj.html" title="关于豪迈">关于豪迈</a></li>
+					<li><a href="http://www.hmzm.cn/lxhm.html" title="联系豪迈">联系豪迈</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--当中内容-->
+		<div class="article">
+			<!--轮播图片-->
+			<div class="banner" id="b04" style="overflow: hidden;width: 100%;">
+				<ul>
+					<li><img src="img/01.jpg"    height="600"></li>
+					<li><img src="img/02.jpg"  height="600"></li>
+					<li><img src="img/03.jpg"   height="600"></li>
+					<li><img src="img/04.jpg"   height="600"></li>
+				</ul>
+			</div>
+			<!--关键词和搜索页面-->
+			<div class="mid-nav">
+				<div class="content">
+					<div class="keyword fl">
+						<b>大家都在搜</b>
+						<a href="/product/" title="吸顶灯">吸顶灯</a>|
+						<a href="/jyxle.html" title="LED吸顶灯">LED吸顶灯</a>|
+						<a href="/gnxle.html" title="家居照明">家居照明</a>|
+						<a href="/ledzj.html" title="卧室吸顶灯">卧室吸顶灯</a>|
+						<a href="/hmjj.html" title="LED生产厂家">LED生产厂家</a>
+					</div>
+					<div class="fl search">
+						<input type="text" id="seachkeywords" class="input" style="color: rgb(102, 102, 102);" placeholder="请输入关键词搜索">
+						<input type="button" class="button">
+					</div>
+				</div>
+			</div>
+			<!--豪迈照明应用场景-->
+			<div class="sce">
+				<div class="pic1">
+					<img src="img/title3.gif" />
+				</div>
+				<div class="pic2">
+					<img src="img/title4.gif" />
+					<img src="img/title5.gif" />
+				</div>
+				<ul>
+					<li>
+						<a href="#" title="豪迈客厅照明应用">
+							<img src="img/pic1.gif" style="width: 277px;" />
+						</a>
+						<h4>
+							<a href="#">豪迈客厅照明应用</a>
+						</h4>
+						<p>
+							别有洞天，雅趣无穷的会客空间
+						</p>
+					</li>
+					<li>
+						<a href="#" title="豪迈客厅照明应用">
+							<img src="img/pic2.gif" style="width: 277px;" />
+						</a>
+						<h4>
+							<a href="#">豪迈客厅照明应用</a>
+						</h4>
+						<p>
+							柔和、宁静，给你一个更好的睡眠
+						</p>
+					</li>
+					<li>
+						<a href="#" title="豪迈客厅照明应用">
+							<img src="img/pic3.gif" style="width: 277px;" />
+						</a>
+						<h4>
+							<a href="#">豪迈客厅照明应用</a>
+						</h4>
+						<p>
+							健康照明，更好保护您的视力
+						</p>
+					</li>
+					<li>
+						<a href="#" title="豪迈客厅照明应用">
+							<img src="img/pic4.gif" style="width: 277px;" />
+						</a>
+						<h4>
+							<a href="#">豪迈客厅照明应用</a>
+						</h4>
+						<p>
+							让灯光成为食欲的一部分
+						</p>
+					</li>
+					<li>
+						<a href="#" title="豪迈客厅照明应用">
+							<img src="img/pic5.gif" style="width: 277px;" />
+						</a>
+						<h4>
+							<a href="#">豪迈客厅照明应用</a>
+						</h4>
+						<p>
+							明亮舒适，老婆从此爱上了厨房
+						</p>
+					</li>
+					<li>
+						<a href="#" title="豪迈客厅照明应用">
+							<img src="img/pic6.gif" style="width: 277px;" />
+						</a>
+						<h4>
+							<a href="#">豪迈客厅照明应用</a>
+						</h4>
+						<p>
+							曲径通幽，完美连接五大空间
+						</p>
+					</li>
+				</ul>
+			</div>
+			<!--豪迈照明应用场景-->
+			<div class="s-ban">
+				<img src="img/s_ban.jpg" width="100%" />
+				<p>
+					<a href="#" title="立即咨询" target="_blank">立即咨询</a>
+					<span>400-850-6277</span>
+				</p>
+			</div>
+			<!--豪迈照明产品展示-->
+			<div class="pro">
+				<div class="p-m">
+					<div style="text-align: center;">
+						<img src="img/function.gif" />
+					</div>
+					<div>
+						<ul class="p-tab">
+							<li id="pro-title1">
+								<a title="简约型LED吸顶灯" href="#" target="_blank">
+                         	简约型LED吸顶灯
+                        </a>
+							</li>
+							<li id="pro-title2">
+								<a title="功能型LED吸顶灯" href="#" target="_blank">
+                        	功能型LED吸顶灯
+                        </a>
+							</li>
+							<li id="pro-title3">
+								<a title="LED筒射灯" href="#" target="_blank">
+                        LED筒射灯
+                        </a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="p-tabc">
+					<div class="p-list" id="list1">
+						<ul>
+							<li>
+								<a href="#"><img src="img/pro1.jpg" /> </a>
+							</li>
+							<li>
+								<a href="#"><img src="img/pro2.jpg" /> </a>
+							</li>
+							<li>
+								<a href="#"><img src="img/pro3.jpg" /> </a>
+							</li>
+						</ul>
+					</div>
+					<div class="p-list" id="list2" style="display: none;">
+						<ul>
+							<li>
+								<a href="#"><img src="img/pro4.jpg" /> </a>
+							</li>
+							<li>
+								<a href="#"><img src="img/pro5.jpg" /> </a>
+							</li>
+							<li>
+								<a href="#"><img src="img/pro6.jpg" /> </a>
+							</li>
+						</ul>
+					</div>
+					<div class="p-list" id="list3" style="display: none;">
+						<ul>
+							<li>
+								<a href="#"><img src="img/pro7.jpg" /> </a>
+							</li>
+							<li>
+								<a href="#"><img src="img/pro8.jpg" /> </a>
+							</li>
+							<li>
+								<a href="#"><img src="img/pro9.jpg" /> </a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--页脚内容-->
+		<div class="f-wrap">
+			<div class="footer">
+				<!--友情链接-->
+				<div class="link fl">
+					<h4>
+						<a href="#"><img src="img/link.gif" style="display: block;"/>  </a>
+						<a href="/FriendLink/Apply.aspx" class="more" title="友链申请入口" target="_blank">+ 友链申请入口</a>
+					</h4>
+					<p>
+						<a target="_blank" href="http://www.srzxjt.com/" title="单仁资讯">单仁资讯</a>
+						<a target="_blank" href="http://www.nsw88.com" title="牛商网">牛商网</a>
+					</p>
+				</div>
+				<!--底部导航-->
+				<div class="f-nav fl">
+					<h4>
+						<a href="#">
+							<img src="img/f_nav.gif" />
+						</a>
+						<a class="more" title="底部导航">+ 底部导航</a>
+					</h4>
+					<p>
+						<a href="http://www.hmzm.cn/hmjj.html" title="关于豪迈">关于豪迈</a>
+						<a href="http://www.hmzm.cn/hmjj.html" title="关于豪迈">LED吸顶灯</a>
+						<a href="http://www.hmzm.cn/hmjj.html" title="关于豪迈">产品中心</a>
+						<a href="http://www.hmzm.cn/hmjj.html" title="关于豪迈">家居照明解决方案</a>
+						<a href="http://www.hmzm.cn/hmjj.html" title="关于豪迈">招商加盟</a>
+						<a href="http://www.hmzm.cn/hmjj.html" title="关于豪迈">豪迈OEM</a>
+						<a href="http://www.hmzm.cn/hmjj.html" title="关于豪迈">网站地图</a>
+						<a href="http://www.hmzm.cn/hmjj.html" title="关于豪迈">联系豪迈</a>
+					</p>
+				</div>
+				<!--版权-->
+				<div class="f-cp fr">
+					<h2>
+						<a>
+						<img src="img/f_logo.gif" />
+						</a>
+					</h2>
+					<ul>
+						<li>
+							江苏豪迈照明科技有限公司版权所有
+							<a href="http://www.miitbeian.gov.cn/" title="备案号：苏ICP备10208523号" target="_blank">备案号：苏ICP备10208523号</a>
+						</li>
+						<li>
+							豪迈服务热线：400-850-6277
+							<span>/</span> 传真：0515-86253777
+						</li>
+						<li>
+							邮箱：tang@hmzm.cn
+							<span>/</span> 地址：江苏建湖经济开发区永兴路999号
+						</li>
+						<li>
+							技术支持
+							<a title="技术支持：牛商网" href="http://www.nsw88.com/" target="_blank">牛商网</a>
+							<span>
+								<a href="#">
+									<img src="img/pic.gif" />
+								</a>
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

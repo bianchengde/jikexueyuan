@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" /> 
+		<title>百度新闻</title>
+		<link rel="stylesheet" href="css/baidunews.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+	</head>
+	<body>
+		<div class="wrapper">
+			<!--顶部logo-->
+			<header>
+				<div class="new-toolbar">
+					<div class="new-toolbar-l">
+						<div class="new-toolbar-btn btn-baidu"></div>
+						<div class="new-toolbar-btn btn-username"></div>
+					</div>
+					<div class="new-toolbar-r">
+						<div class="new-toolbar-btn btn-search"></div>
+						<div class="new-toolbar-btn btn-subscribe"></div>
+					</div>
+				</div>
+			</header>
+			<!--导航部分-->
+			<div>
+				<div id="index-navigator">
+					<div class="divider"></div>
+					<div class="index-content">
+						<ul>
+							<li><a href="javascript:void(0);" onclick="searchNews(1);">社会</a></li>
+							<li><a href="javascript:void(0);" onclick="searchNews(2);">百家</a></li>
+							<li><a href="javascript:void(0);" onclick="searchNews(2);">百家</a></li>
+							<li><a href="javascript:void(0);" onclick="searchNews(2);">百家</a></li>
+							<li><a href="javascript:void(0);" onclick="searchNews(2);">百家</a></li>
+						</ul>
+					</div>
+				</div>
+				<!--轮播-->
+				<div id="index-sections">
+					<div class="gallery-container">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<a href="#" class="swiper-slide" style="background: url(img/change1.jpg);"></a>
+								<a href="#"  class="swiper-slide" style="background: url(img/change2.jpg);"></a>
+								<a href="#"  class="swiper-slide" style="background: url(img/change3.jpg);"></a>
+							</div>
+							 <!--分页器 -->
+    						<div class="swiper-pagination"></div>
+    						<!-- 导航按钮 -->
+						    <div class="swiper-button-prev"></div>
+						    <div class="swiper-button-next"></div>
+						</div>
+					</div>
+					<div class="index-subpage">
+						<!--新闻主体部分-->
+						<div class="index-list">
+							<div class="index-list-item">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var mySwiper = new Swiper('.swiper-container',{
+			    loop: true,
+				autoplay: 3000,
+				 //分页器
+			    pagination: '.swiper-pagination',
+			    //分页可点击
+			    paginationClickable :true,
+			    //前进后退按钮
+			    nextButton: '.swiper-button-next',
+			    prevButton: '.swiper-button-prev',
+  			});
+  			
+  			function StringBuffer() {
+    			this.__strings__ = new Array();
+			}
+			StringBuffer.prototype.append = function (str) {
+    			this.__strings__.push(str);
+    			return this;    //方便链式操作
+			}
+			StringBuffer.prototype.toString = function () {
+    			return this.__strings__.join("");
+			}
+  			function searchNews(type){
+  				$.ajax({
+  					type:"get",
+  					data:{"type":type},
+  					url:"http://127.0.0.1/mission8/selectmysql2.php",
+  					success:function(result){
+  						$(".index-list-item").children('div').remove();
+  						$.each(result.data, function(n,item) {
+  							var buffer = new StringBuffer();
+							buffer.append("<div class=\"index-list-main\">")
+							.append("<div class=\"index-list-image\">")
+							.append("<img  src=\"img/news1.JPEG\"/></div>")
+							.append("<div class=\"index-list-main-text\">")
+							.append("<div class=\"index-list-main-title\">"+item.newsTitle+"</div>")
+							.append("<div class=\"index-list-main-abs\">"+item.newsContent+"</div>")
+							.append("</div>"+"</div>");
+  							$(".index-list-item").append(buffer.toString());
+  						});
+  					}
+  				});
+  			}
+  			$(function(){
+  				$.ajax({
+  					type:"get",
+  					data:{"type":1},
+  					url:"http://127.0.0.1/mission8/selectmysql2.php",
+  					success:function(result){
+  						$(".index-list-item").children('div').remove();
+  						$.each(result.data, function(n,item) {
+  							var buffer = new StringBuffer();
+							buffer.append("<div class=\"index-list-main\">")
+							.append("<div class=\"index-list-image\">")
+							.append("<img  src=\"img/news1.JPEG\"/></div>")
+							.append("<div class=\"index-list-main-text\">")
+							.append("<div class=\"index-list-main-title\">"+item.newsTitle+"</div>")
+							.append("<div class=\"index-list-main-abs\">"+item.newsContent+"</div>")
+							.append("</div>"+"</div>");
+  							$(".index-list-item").append(buffer.toString());
+  						});
+  					}
+  				});
+  			});
+		</script>
+	</body>
+</html>

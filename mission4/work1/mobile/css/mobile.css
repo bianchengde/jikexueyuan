@@ -1,0 +1,120 @@
+<style type="text/css"> 
+/*公共元素*/
+body {
+	margin: 0;
+	padding: 0;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+ul {
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+/*公共元素End*/
+
+.container {
+	width: 630px;
+	background-color: #1D243E;
+}
+.nav {
+	width: 100%;
+}
+.headShow {
+	text-align: center;
+}
+.article {
+	width: 100%;
+	height: auto;
+}
+.icon {
+	margin-top: 80px;
+	padding-bottom: 80px;
+	text-align: center;
+}
+.article ul {
+	height: auto;
+	zoom: 1;
+	overflow: hidden;
+}
+.article li {
+	padding: 0 0 10px 85px;
+}
+@media screen and (max-width: 1070px) {
+	body {
+		margin: 0;
+		padding: 0;
+	}
+	.container {
+		width: 980px;
+		background-color: #1D243E;
+	}
+	.header img {
+		width: 980px;
+	}
+	.head-img1,
+	.head-img2 {
+		width: 150px;
+		height: 150px;
+	}
+	.headShow .head {
+		width: 250px;
+		height: 250px;
+		margin-top: 110px;
+	}
+	.headShow .name {
+		width: 167px;
+	}
+	.headShow .location {
+		width: 210px;
+		height: 30px;
+	}
+	.icon img {
+		width: 240px;
+		height: 240px;
+		margin-left: 100px;
+		margin-top: 100px;
+	}
+}
+@media screen and (max-width: 640px) {
+	body {
+		margin: 0;
+		padding: 0;
+	}
+	.container {
+		width: 980px;
+		background-color: #1D243E;
+	}
+	.header img {
+		width: 980px;
+	}
+	.head-img1,
+	.head-img2 {
+		width: 150px;
+		height: 150px;
+	}
+	.headShow .head {
+		width: 250px;
+		height: 250px;
+		margin-top: 80px;
+	}
+	.headShow .name {
+		width: 167px;
+	}
+	.headShow .location {
+		width: 210px;
+		height: 30px;
+	}
+	.icon img {
+		width: 240px;
+		height: 240px;
+		margin-left: 100px;
+		margin-top: 50px;
+	}
+}
+</style>

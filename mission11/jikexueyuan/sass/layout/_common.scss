@@ -1,0 +1,31 @@
+//公共
+body,
+html,
+dl,
+dd,
+ul,
+li,
+p,
+h2,
+h3,
+img {
+    margin: 0;
+    padding: 0;
+    font-family: $font-family;
+    @include box-sizing(border-box);
+    color: $font-color;
+}
+
+a {
+    text-decoration: none;
+    color: $font-color;
+}
+
+ul {
+    list-style: none;
+}
+input, label, select, option, textarea, button, fieldset, legend {
+    font-family: $font-family;
+    color: $font-color;
+    @include box-sizing(border-box);
+}

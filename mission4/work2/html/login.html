@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>HRM</title>
+		<base href="<%=basePath%>" />
+		<!-- 包含头部信息用于适应不同设备 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 包含 bootstrap 样式表 -->
+		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<script type="text/javascript" src="../plugins/jquery/jquery-2.1.1.min.js"></script>
+		<script src="../plugins/bootstrap/bootstrap.js"></script>
+		<link rel="stylesheet" href="../plugins/bootstrap/bootstrap.min.css">
+		<style type="text/css">
+			.userNameStyle .glyphicon-ok {
+				margin-top: 140px;
+			}
+			.userNameStyle .glyphicon-remove {
+				margin-top: 140px;
+			}
+			.passwordStyle .glyphicon-ok {
+				margin-top: 5px;
+			}
+			.passwordStyle .glyphicon-remove {
+				margin-top: 5px;
+			}
+		</style>
+
+	</head>
+
+	<body style="background:url(../img/bg-login.png) no-repeat left top;background-color:#d0f5f2; background-attachment:fixed;
+   background-size:cover;
+-webkit-background-size:cover;
+-moz-background-size:cover;">
+
+		<div class="container">
+
+			<div style="margin-top:2%;">&nbsp;</div>
+
+			<div>
+				<div class="row">
+					<div class="col-lg-3 col-sm-3 col-md-3"></div>
+					<div class="col-lg-6 col-sm-6 col-md-6" style="background:url(../img/bg-line.png) repeat-x;padding-left: 40px;padding-right: 40px;">
+
+						<form role="form" id="loginForm" method="post">
+							<div class="form-group userNameStyle" style="height: 200px;">
+								<dl class="text-center">
+									<img src="../img/hrm.png" width="322" height="54" style=" margin-top:60px;" />
+								</dl>
+								<div>
+									<span class="error_detail" style="font-size:12px;color:#A94442"></span>
+								</div>
+								<div class="input-group" style="height:46px;">
+									<div class="input-group-addon"><i style="color:gray;" class="fa fa-user"></i></div>
+									<input type="text" id="userName" class="form-control" name="userName" placeholder="Username(admin)" style="height:46px;" value="">
+								</div>
+								<div>
+									<span id="userError" style="color: #FF0000; padding-left: 40px;"></span>
+								</div>
+							</div>
+							<div class="form-group passwordStyle" style="height: 60px;">
+								<div class="input-group">
+									<div class="input-group-addon"><i style="color:gray;" class="fa fa-asterisk"></i></div>
+									<input type="password" id="passWord" class="form-control" name="password" placeholder="Password(admin)" style=" height:46px;" value="">
+								</div>
+								<div>
+									<span id="passError" style="color: #FF0000; padding-left: 40px;"></span>
+								</div>
+							</div>
+
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" id="login_checkbox"> Remember me
+								</label>
+								<a type="button" class="btn btn-default" onclick="login()" style="background:#f39c11; border:solid 1px #d4890e; padding-right:20px; float:right; color:#FFF;">Sign In</a>
+							</div>
+
+							<div style="height:54px;line-height:54px; text-align:center;">
+								<span class="help-block" style="font-size:10px; text-align:center;">All Content Copyright@2013 By ST Electronics (Wuxi) Co., Ltd. </span>
+							</div>
+
+						</form>
+					</div>
+					<div class="col-lg-3 col-sm-3 col-md-3"></div>
+
+				</div>
+			</div>
+		</div>
+		<script>
+			/*登录验证*/
+			function login() {
+				var userName = $("#userName").val();
+				var password = $("#passWord").val();
+				if (userName == "admin") {
+					$("#userError").html("");
+					if (password == "admin") {
+						$("#passError").html("");
+						location.href = "home.html"
+					} else {
+						$("#passError").html("密码输入错误");
+					}
+				} else {
+					console.log("inin");
+					$("#userError").html("用户名输入错误");
+				}
+			}
+		</script>
+	</body>
+
+</html>

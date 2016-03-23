@@ -1,0 +1,86 @@
+//head
+.head {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo {
+    width: 113px;
+    height: 41px;
+}
+
+.search {
+    position: absolute;
+    left: 50%;
+    width: 380px;
+    height: 38px;
+    border: 1px solid rgb(228, 228, 228);
+    display: inline-block;
+    @include box-sizing(border-box);
+    margin: 3px 0 0 -190px;
+    vertical-align: bottom;
+}
+
+.search__input {
+    width: 100%;
+    height: 36px;
+    border: 0;
+    line-height: 18px;
+    font-size: $font-size;
+    text-align: left;
+    padding: 9px 150px 9px 15px;
+    outline: none;
+}
+.search__btn {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 40px;
+    height: 38px;
+    border: 1px solid $base-gray;
+    background: url('../img/topsearch-icon.png') center center no-repeat;
+    cursor: pointer;
+}
+.search__btn{
+    &:hover{
+        background: rgb(53, 181, 88) url('../img/topsearch-icon2.png') no-repeat center center;
+    }
+}
+
+.hotWords {
+    position: absolute;
+    top: 9px;
+    right: 48px;
+    font-size: $font-size;
+}
+
+.hotWords__a {
+    display: inline-block;
+    font-size: $font-size;
+    color: rgb(131, 128, 128);
+}
+
+.hotWords__a {
+    &:hover{
+      background-color: $base-gray;
+    }
+}
+
+.loginbox {
+    text-align: right;
+    line-height: 50px;
+    font-size: $font-size;
+    display: inline-block;
+}
+
+.loginbox__myMessage {
+    background: url('../img/massage-icon2.gif') left center no-repeat;
+    background-size: 15px 13px;
+    @include box-sizing(content-box);
+    width: 50px;
+    text-align: left;
+    padding-left: 16px;
+    position: relative;
+}
+//head End

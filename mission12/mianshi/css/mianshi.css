@@ -1,0 +1,71 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	background-color: #f1f4f9;
+}
+h1 {
+	color: #333;
+	font-size: 24px;
+	font-weight: 700;
+	font-family: inherit;
+	line-height: 1.2;
+	color: #009A61;
+}
+h3 {
+	font-size: 18px;
+	font-weight: 600;
+}
+h2 {
+	color: #009A61;
+}
+.container {
+	width: 900px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background-color: white;
+}
+.all {
+	padding: 10px;
+	border: 1px solid #E6E6E6;
+}
+.head {
+	height: 100px;
+	padding: 15px 0;
+	color: #1D9FD3;
+}
+.catalog {
+	position: fixed;
+	border: 1px solid #E6E6E6;
+}
+.catalog a {
+	color: #009A61;
+}
+p {
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, STHeiti, "Microsoft Yahei", "SimSun", sans-serif;
+}
+#animation {
+	-webkit-animation: fadeInLeft 1s .2s ease both;
+	-moz-animation: fadeInLeft 1s .2s ease both;
+}
+@-webkit-keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(-20px)
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translateX(0)
+	}
+}
+@-moz-keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		-moz-transform: translateX(-20px)
+	}
+	100% {
+		opacity: 1;
+		-moz-transform: translateX(0)
+	}
+}

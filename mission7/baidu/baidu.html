@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>百度一下，你就知道</title>
+		<link rel="stylesheet" type="text/css" href="css/baidu.css" />
+		<link rel="stylesheet" href="css/baidu2.css" id="loginStyle" />
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
+		<!--[if IE]>
+		<link rel="stylesheet" type="text/css" href="baiduie.css"/>
+		<![endif]-->
+	</head>
+
+	<body>
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+		<script src="js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				/*页面加载时文本框获得焦点*/
+				document.getElementById('search').blur();
+				document.getElementById('search').focus();
+				/*页面加载时文本框获得焦点End*/
+				var username = $.cookie("username");
+				var ischeck = $.cookie("check");
+				/*判断是否选中自动登录*/
+				if (!$.cookie('check')) {
+					$("#loginStyle").attr("disabled", true);
+					$("#logo1").show();
+					$("#logo2").hide();
+					$("#s-wrap").hide();
+					$("#nav-left").hide();
+					$("#s-top-wrap").hide();
+				} else {
+					$("#loginStyle").attr("disabled", false);
+					$("#logo2").show();
+					$("#logo1").hide();
+					$("#s-wrap").show();
+					$("#nav-left").show();
+					$("#s-top-wrap").show();
+					$("#lb").html(username);
+					$("#lb").mouseover(function() {
+						$("#tooltip1").show();
+					});
+					$("#tooltip1").mouseleave(function() {
+						$("#tooltip1").hide();
+					});
+				}
+				/*我的关注默认选中*/
+				$("#s-content-1").show().siblings().hide();
+				$("#main-nav li:first-child").addClass("on");
+				$("#main-nav li").each(function(index) {
+					$(this).click(function() {
+						$("#main-nav li.on").removeClass("on");
+						$(this).addClass("on");
+						if (index == 0) {
+							$("#s-content-1").show().siblings().hide();
+						} else if (index == 1) {
+							$("#s-content-2").show().siblings().hide();
+						}
+					});
+				});
+				/*我的关注默认选中End*/
+				/*更多产品效果*/
+				$("#more").mouseover(function() {
+					$("#s_bdbri").slideDown("fast", "linear");
+				});
+				$("#s_bdbri").mouseover(function() {
+					$("#s_bdbri").show();
+				});
+				$("#s_bdbri").mouseleave(function() {
+					$("#s_bdbri").hide();
+				});
+				/*$("#more").mouseleave(function(){
+					$("#s_bdbri").slideUp(100);
+				});*/
+				/*回到顶部效果*/
+				$('#top_feed').click(function() {
+					$('html,body').animate({
+						scrollTop: '0px'
+					}, 500);
+				});
+				/*监听窗口的滚动*/
+				$(window).scroll(function(event) {
+					if ($("body").scrollTop() > 100) {
+						/*到顶部距离大于100px出现回到顶部*/
+						$("#top_feed").css("visibility", "visible");
+					} else {
+						$("#top_feed").css("visibility", "hidden");
+					}
+					if ($("body").scrollTop() > 200) {
+						/*到顶部距离大于200px出现顶部搜索框*/
+						$("#s-top-wrap").css("visibility", "visible");
+					} else {
+						$("#s-top-wrap").css("visibility", "hidden");
+					}
+				});
+				/*关闭登录对话框*/
+				$("#close-btn").click(function() {
+					$("#dialog").hide()
+				});
+				/*清空用户名和密码*/
+				$("#clear-btn1").click(function() {
+					$("#input-username").val("");
+					$("#input-username").focus();
+				});
+				$("#clear-btn2").click(function() {
+					$("#input-password").val("");
+					$("#input-password").focus();
+				});
+				/*清空用户名和密码End*/
+				/*点击登录弹出登录对话框*/
+				$("#lb").click(function() {
+					$("#dialog").show();
+					/*自动填入用户名密码*/
+					if ($.cookie("username") && $.cookie("password")) {
+						$("#input-username").val($.cookie("username"));
+						$("#input-password").val($.cookie("password"));
+					}
+				});
+				/*登录框可拖拽*/
+				$("#dialog").draggable();
+				$("#classify").click(function() {
+					$("#classify-icon").toggleClass("classed");
+				});
+				$("#cashback").click(function() {
+					$("#cashback-icon").toggleClass("classed");
+				});
+			});
+			/*登录方法*/
+			function login() {
+				var username = $("#input-username").val();
+				var password = $("#input-password").val();
+				/*验证登录名密码*/
+				if (username == "admin" && password == "admin") {
+					$.cookie("username", username);
+					$.cookie("password", password);
+					$("#lb").html(username);
+					if ($('#pass-checkbox').is(':checked')) {
+						$.cookie("check", "checked");
+						console.log($.cookie("check"));
+					}
+					$("#dialog").hide();
+					$("#loginStyle").attr("disabled", false);
+					$("#logo2").show();
+					$("#logo1").hide();
+					$("#s-wrap").show();
+					$("#nav-left").show();
+					$("#s-top-wrap").show();
+					$("#lb").html(username);
+					$("#lb").mouseover(function() {
+						$("#tooltip1").show();
+					});
+					$("#tooltip1").mouseleave(function() {
+						$("#tooltip1").hide();
+					});
+				} else {
+					alert("用户名或密码错误");
+				}
+			}
+			/*登出*/
+			function logout() {
+				$.cookie('check', '', {
+					expires: -1
+				});
+				location.reload();
+			}
+			/*百度输入框效果*/
+			function addBorder() {
+				$("#sp1").removeClass("hoverBorder");
+				$("#sp1").addClass("changeBorder");
+			}
+
+			function removeBorder() {
+				$("#sp1").removeClass("changeBorder")
+			}
+
+			function border() {
+				$("#sp1").addClass("hoverBorder");
+			}
+
+			function borderChange() {
+				$("#sp1").removeClass("hoverBorder");
+			}
+		</script>
+		<!--container-->
+		<div class="container">
+			<div class="s-skin">
+			</div>
+			<!--head-->
+			<div class="nav">
+				<div class="top-wrap"></div>
+				<ul class="fl nav-left" id="nav-left">
+					<li>
+						<span>无锡:</span>
+						<span class="skin-weather"></span>
+						<span>15℃</span>
+					</li>
+					<li>
+						<span>良</span>
+						<span>66</span>
+						<span>|</span>
+					</li>
+					<li>
+						<a href="" class="nav-title"><span>宝箱</span></a>
+						<a href="" class="nav-title"><span>换肤</span></a>
+						<a href="" class="nav-title"><span>消息</span></a>
+					</li>
+				</ul>
+				<ul class="nav-right">
+					<li class="fl"><a href="http://news.baidu.com" class="mnav">新闻</a></li>
+					<li class="fl"><a href="http://www.hao123.com" class="mnav">hao123</a></li>
+					<li class="fl"><a href="http://map.baidu.com" class="mnav">地图</a></li>
+					<li class="fl"><a href="http://v.baidu.com" class="mnav">视频</a></li>
+					<li class="fl"><a href="http://tieba.baidu.com" class="mnav">贴吧</a></li>
+					<li class="fl"><a href="javascript:void(0);" class="lb" id="lb">登录</a>
+						<div class="tooltip" id="tooltip1">
+							<ul>
+								<li>
+									<a class="setpref" href="javascript:void(0);" onclick="logout();">退出</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="fl set"><a href="#" class="st">设置</a>
+						<div class="tooltip" id="tooltip">
+							<ul>
+								<li>
+									<a class="setpref" href="#">搜索设置</a>
+								</li>
+								<li>
+									<a href="http://www.baidu.com/gaoji/advanced.html" target="_blank">高级搜索</a>
+								</li>
+								<li>
+									<a href="#" class="color">关闭预测</a>
+								</li>
+								<li>
+									<a href="#">搜索历史</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="fl"><a href="http://www.baidu.com/more/" class="cp" id="more">更多产品</a></li>
+				</ul>
+				<div class="s_bdbri" id="s_bdbri">
+					<div class="s_bdmainlink">
+						<div class="s_bdbriimgtitle">更多产品</div>
+						<a href="http://music.baidu.com" target="_blank">
+							<img src="img/music.png" />音乐
+						</a>
+						<a href="http://image.baidu.com" target="_blank">
+							<img src="img/image.png" />图片
+						</a>
+						<a href="http://zhidao.baidu.com" target="_blank">
+							<img src="img/zhidao.png" />知道
+						</a>
+						<a href="http://wenku.baidu.com" target="_blank">
+							<img src="img/wenku.png" />文库
+						</a>
+						<a href="http://top.baidu.com" target="_blank">
+							<img src="img/bang.png" />风云榜
+						</a>
+						<a href="http://e.baidu.com/" target="_blank">
+							<img src="img/tuiguang.png" />百度推广
+						</a>
+						<div class="s_bdbrievenmore">
+							<a href="http://www.baidu.com/more/" target="_blank">全部产品>></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="head">
+				<div class="head-top">
+					<div class="weather">
+						<div>12°</div>
+						<div class="icon-weather"></div>
+						<div class="weather-status">
+							<p>无锡</p>
+							<p>空气&nbsp;55</p>
+						</div>
+						<i class="icon-down"></i>
+					</div>
+					<div class="userInfo">
+						<a href="#"></a>
+					</div>
+				</div>
+			</div>
+			<!--end head-->
+			<div class="s-top-wrap" id="s-top-wrap">
+				<div class="s-center-box">
+					<div class="head-wrap">
+						<div class="s_form">
+							<a>
+								<img src="img/bd_logo3.png" />
+							</a>
+							<form class="fm">
+								<span>
+									<input type="text"  class="fm_input" />
+								</span>
+								<span class="btn_wr">
+									<input type="submit" class="self-btn" value="百度一下" />
+								</span>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--center-->
+			<div class="center">
+				<div>
+					<img hidefocus="true" src="img/bd_logo1.png" id="logo1" height="129">
+					<img hidefocus="true" src="img/bd_logo2.png" id="logo2" height="129">
+				</div>
+				<div class="center-text">
+					<span class="sp1" id="sp1" onmousemove="border();" onmouseleave="borderChange();">
+						<input type="text"  onfocus="addBorder();" onblur="removeBorder();" class="search" id="search" />								
+					</span>
+					<span class="sp2">
+						<input type="submit" id="baidu"  value="百度一下" maxlength="255"  class="bg s_btn">
+					</span>
+				</div>
+				<form class="se-form">
+					<div class="con-wrap">
+						<textarea class="se-input"></textarea>
+						<div class="se-inner">
+							<button id="index-bn" class="se-bn" type="submit">百度一下</button>
+						</div>
+					</div>
+				</form>
+				<div class="s-wrap" id="s-wrap">
+					<div class="s-main">
+						<div class="s-mancard-main">
+							<ul id="main-nav">
+								<li><span>
+									<div class="mine-icon"></div>
+									<div class="mine-text">我的关注</div>
+								    </span></li>
+								<li><span>推荐</span></li>
+								<li><span>导航</span></li>
+								<li><span>视频</span></li>
+								<li><span>购物</span></li>
+							</ul>
+						</div>
+						<div class="s-center-container">
+							<div id="s-content-1" class="s-content">
+								<div class="s-content-title">
+									<div>
+										<div class="mine-title-icon"><em></em></div>
+										<span style="font-weight: bold;">我的导航</span>
+										<span>(62)</span>
+									</div>
+									<div class="s-setbar">
+										<div class="set-bar-content">
+											<div class="set-menu">
+												<div>添加</div>
+												<div>编辑</div>
+												<div>
+													<span class="class-icon" id="classify-icon"></span>
+													<span class="class-text" id="classify">分类显示</span>
+												</div>
+												<div>
+													<span class="class-icon" id="cashback-icon"></span>
+													<span class="class-text" id="cashback">返利模式</span>
+												</div>
+												<div class="toTop">置顶</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="s-content-center">
+									<dl class="s-opacity-blank">
+										<dt class="dir-name">
+											<span class="name-text">综合</span>
+										</dt>
+										<dd class="dir-content">
+											<a href="#">
+												<img src="img/baiduicon4.png" />
+												<div>
+													<span>360网址导航</span>
+												</div>
+											</a>
+										</dd>
+										<dd class="dir-content">
+											<a href="">
+												<img src="img/baiduicon3.png" />
+												<div>
+													<span>QQ邮箱</span>
+												</div>
+											</a>
+										</dd>
+										<dd class="dir-content">
+											<a href="">
+												<img src="img/baiduicon5.png" />
+												<div>
+													<span>58同城</span>
+												</div>
+											</a>
+										</dd>
+										<dd class="dir-content">
+											<a href="">
+												<img src="img/baiduicon6.png" />
+												<div>
+													<span>搜狐</span>
+												</div>
+											</a>
+										</dd>
+										<dd class="dir-content">
+											<a href="">
+												<img src="img/baiduicon1.png" />
+												<div>
+													<span>火影忍者</span>
+												</div>
+											</a>
+										</dd>
+										<dd class="dir-content">
+											<a href="">
+												<img src="img/baiduicon8.png" />
+												<div>
+													<span>铁路客户服务中心</span>
+												</div>
+											</a>
+										</dd>
+										<dd class="dir-content">
+											<a href="">
+												<img src="img/baiduicon7.png" />
+												<div>
+													<span>迅雷看看</span>
+												</div>
+											</a>
+										</dd>
+										<dd class="dir-content">
+											<a href="">
+												<img src="img/baiduicon9.png" />
+												<div>
+													<span>赶集网</span>
+												</div>
+											</a>
+										</dd>
+										<dd class="dir-content">
+											<a href="">
+												<img src="img/baiduicon10.png" />
+												<div>
+													<span>前程无忧</span>
+												</div>
+											</a>
+										</dd>
+									</dl>
+									<dl class="s-opacity-blank">
+										<dt class="dir-name">
+											<span class="name-text">贴吧</span>
+										</dt>
+										<dd class="dir-content">
+											<a href="">
+												<img src="img/baiduicon11.png" />
+												<div>
+													<span>ebc5吧</span>
+												</div>
+											</a>
+										</dd>
+										<dd class="dir-content">
+											<a href="">
+												<img src="img/baiduicon11.png" />
+												<div>
+													<span>英雄联盟吧</span>
+												</div>
+											</a>
+										</dd>
+										<dd class="dir-content">
+											<a href="">
+												<img src="img/baiduicon11.png" />
+												<div>
+													<span>李毅吧</span>
+												</div>
+											</a>
+										</dd>
+									</dl>
+									<dl class="s-opacity-blank">
+										<dt class="dir-name">
+											<span class="name-text">社区</span>
+										</dt>
+										<dd class="dir-content">
+											<a href="">
+												<img src="img/baiduicon12.png" />
+												<div>
+													<span>猫扑大杂烩</span>
+												</div>
+											</a>
+										</dd>
+										<dd class="dir-content">
+											<a href="">
+												<img src="img/baiduicon13.png" />
+												<div>
+													<span>人人网</span>
+												</div>
+											</a>
+										</dd>
+									</dl>
+									<dl class="s-opacity-blank">
+										<dt class="dir-name">
+											<span class="name-text">购物</span>
+										</dt>
+										<dd class="dir-content">
+											<a href="">
+												<img src="img/baiduicon14.png" />
+												<div>
+													<span>淘宝</span>
+												</div>
+											</a>
+										</dd>
+										<dd class="dir-content">
+											<a href="">
+												<img src="img/baiduicon15.png" />
+												<div>
+													<span>卓越网</span>
+												</div>
+											</a>
+										</dd>
+									</dl>
+								</div>
+							</div>
+							<div id="s-content-2" class="s-content">
+								<div class="s-news-right">
+									<div class="s-news-right-title">
+										<div class="title-text">
+											<a href="http://top.baidu.com/?fr=mhd_card" target="_blank">实时热点</a>
+										</div>
+										<a class="hot-refresh">
+											<span class="hot-refresh-icon"></span>
+											<span class="hot-refresh-text">换一换</span>
+										</a>
+									</div>
+									<ul class="s-news-right-content">
+										<li class="news-meta-item">
+											<span style="width: 135px;">
+													<a href="">
+														甄子丹误伤鼻骨
+													</a>
+													<span class="new-identity"></span>
+											</span>
+										</li>
+										<li class="news-meta-item">
+											<span style="width: 135px;">
+													<a href="">
+														甄子丹误伤鼻骨
+													</a>
+													<span class="new-identity"></span>
+											</span>
+										</li>
+										<li class="news-meta-item">
+											<span style="width: 135px;">
+													<a href="">
+														甄子丹误伤鼻骨
+													</a>
+													<span class="new-identity"></span>
+											</span>
+										</li>
+										<li class="news-meta-item">
+											<span style="width: 135px;">
+													<a href="">
+														甄子丹误伤鼻骨
+													</a>
+													<span class="new-identity"></span>
+											</span>
+										</li>
+										<li class="news-meta-item">
+											<span style="width: 135px;">
+													<a href="">
+														甄子丹误伤鼻骨
+													</a>
+													<span class="new-identity"></span>
+											</span>
+										</li>
+										<li class="news-meta-item">
+											<span style="width: 135px;">
+													<a href="">
+														甄子丹误伤鼻骨
+													</a>
+													<span class="new-identity"></span>
+											</span>
+										</li>
+										<li class="news-meta-item">
+											<span style="width: 135px;">
+													<a href="">
+														甄子丹误伤鼻骨
+													</a>
+													<span class="new-identity"></span>
+											</span>
+										</li>
+										<li class="news-meta-item">
+											<span style="width: 135px;">
+													<a href="">
+														甄子丹误伤鼻骨
+													</a>
+													<span class="new-identity"></span>
+											</span>
+										</li>
+									</ul>
+								</div>
+								<div class="news-flash-tips">
+									<div class="left-line s-opacity-blank8"></div>
+									<div class="tips-content">
+										<div class="tips-icon"></div>
+										<span>以下信息根据您的兴趣推荐</span>
+									</div>
+									<div class="right-line s-opacity-blank8"></div>
+								</div>
+								<div class="s-news-list-wrapper">
+									<div class="s-news-item">
+										<div class="s-text-content">
+											<h2>
+												<a>
+													<span class="prefix"></span>
+													 涉嫌炸靖国神社韩男疑携火药再赴日 引发日韩纠纷
+												</a>
+												</h2>
+										</div>
+										<div class="s-pic-content">
+											<ul>
+												<li>
+													<a>
+														<img />
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="s-news-item">
+										<div class="s-text-content">
+											<h2>
+												<a>
+													<span class="prefix"></span>
+													 涉嫌炸靖国神社韩男疑携火药再赴日 引发日韩纠纷
+												</a>
+												</h2>
+										</div>
+										<div class="s-pic-content">
+											<ul>
+												<li>
+													<a>
+														<img />
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="s-news-item">
+										<div class="s-text-content">
+											<h2>
+												<a>
+													<span class="prefix"></span>
+													 涉嫌炸靖国神社韩男疑携火药再赴日 引发日韩纠纷
+												</a>
+												</h2>
+										</div>
+										<div class="s-pic-content">
+											<ul>
+												<li>
+													<a>
+														<img />
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="s-news-item">
+										<div class="s-text-content">
+											<h2>
+												<a>
+													<span class="prefix"></span>
+													 涉嫌炸靖国神社韩男疑携火药再赴日 引发日韩纠纷
+												</a>
+												</h2>
+										</div>
+										<div class="s-pic-content">
+											<ul>
+												<li>
+													<a>
+														<img />
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="s-content-3"></div>
+							<div id="s-content-4"></div>
+							<div id="s-content-5"></div>
+						</div>
+					</div>
+				</div>
+				<div class="dialog" id="dialog">
+					<div class="dialog-wrap">
+						<div class="dialog-title">
+							<span class="close-btn" id="close-btn"></span>
+							<span class="dialog-login">登录百度账号</span>
+						</div>
+						<div class="dialog-content">
+							<div class="dialog-clearfix">
+								<div class="pass-login-pop-content">
+									<div class="pass-login-pop-form">
+										<div class="tang-pass-login">
+											<form class="pass-form">
+												<p class="pass-form-item">
+													<label class="label-username"></label>
+													<input class="input-username" id="input-username" placeholder="用户名admin" />
+													<span class="clear-btn1" id="clear-btn1"></span>
+												</p>
+												<p class="pass-form-item">
+													<label class="label-password"></label>
+													<input class="input-password" id="input-password" type="password" placeholder="密码admin" />
+													<span class="clear-btn2" id="clear-btn2"></span>
+												</p>
+												<p class="pass-form-item">
+													<input type="checkbox" class="pass-checkbox" id="pass-checkbox" />
+													<label class="pass-login">下次自动登录</label>
+												</p>
+												<p class="pass-form-item">
+													<input type="button" onclick="login();" value="登录" class="login-btn" />
+												</p>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="top_feed" id="top_feed">
+					<a href="javascript:void(0)">
+						<span class="toTop-icon"></span>
+					</a>
+				</div>
+				<div class="navs">
+					<a>
+						<i class="nav-new"></i> 新闻
+					</a>
+					<a>
+						<i class="nav-book"></i> 小说
+					</a>
+					<a>
+						<i class="nav-video"></i> 视频
+					</a>
+					<a>
+						<i class="nav-life"></i> 生活+
+					</a>
+					<a>
+						<i class="nav-map"></i> 地图
+					</a>
+					<a>
+						<i class="nav-more"></i> 更多
+					</a>
+				</div>
+				<div class="plus-card">
+					<div class="plus">
+						<div class="plus-title">
+							<div class="normal-title">
+								<i class="icon-nav"></i>
+								<h2>常用网址</h2>
+							</div>
+						</div>
+						<div class="plus-content">
+							<a href="#">贴吧</a>
+							<a href="#">hao123</a>
+							<a href="#">地图</a>
+							<a href="#">百度vip</a>
+							<a href="#">图片</a>
+							<a href="#">音乐</a>
+							<a href="#">糯米</a>
+						</div>
+					</div>
+				</div>
+				<div class="plus-card">
+					<div class="plus">
+						<div class="plus-title">
+							<div class="normal-title">
+								<i class="icon-life"></i>
+								<h2>生活服务</h2>
+							</div>
+						</div>
+						<div class="plus-content">
+							<div class="gps-zone">
+								<p>点击定位，查看附近位置信息</p>
+								<button>定位</button>
+							</div>
+							<ul class="lbs-list">
+								<li>
+									<a href="#">
+										<div class="ser-film"></div>
+										<p>电影</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="ser-tuan"></div>
+										<p>团购</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="ser-waimai"></div>
+										外卖
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="ser-taxi"></div>
+										打车
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="ser-hotel"></div>
+										酒店
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="ser-food"></div>
+										美食
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="ser-ktv"></div>
+										KTV
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="ser-bank"></div>
+										银行
+									</a>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--end center-->
+			<!--footer-->
+			<div class="foot">
+				<a href="#" class="copyright">使用百度前必读&nbsp; Baidu&nbsp; 京ICP证030173号</a>
+			</div>
+			<div class="footer">
+				<p class="foot-p1">
+					<a id="setf" href="http://www.baidu.com/cache/sethelp/help.html" target="_blank" style="display: inline;">把百度设为主页</a>
+					<a href="http://home.baidu.com">关于百度</a>
+					<a href="http://ir.baidu.com">About&nbsp;&nbsp;Baidu</a>
+				</p>
+				<p class="foot-p2">
+					&copy;2015&nbsp;Baidu&nbsp;
+					<a href="http://www.baidu.com/duty/">使用百度前必读</a> &nbsp;
+					<a href="http://jianyi.baidu.com/">意见反馈</a> &nbsp;京ICP证030173号&nbsp;
+					<i class="c-icon-icrlogo"></i>
+				</p>
+			</div>
+			<!--end footer-->
+		</div>
+		<!--end container-->
+	</body>
+
+</html>

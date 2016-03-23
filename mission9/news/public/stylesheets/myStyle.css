@@ -1,0 +1,9 @@
+.wrapper-page{
+	margin: 5% auto;
+	position: relative;
+	width: 420px;
+}
+.text-custom{
+	color: #5fbeaa;
+	font-weight: 700;
+}

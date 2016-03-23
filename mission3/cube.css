@@ -1,0 +1,111 @@
+	body {
+		/*视角*/
+		
+		-webkit-perspective: 1000px;
+		perspective: 1000px;
+	}
+	/*魔方旋转动画*/
+	
+	@-webkit-keyframes cube {
+		0% {
+			-webkit-transform: rotateX(40deg) rotateY(10deg);
+			transform: rotateX(40deg) rotateY(10deg);
+		}
+		12.5% {
+			-webkit-transform: rotateX(0) rotateY(90deg);
+			transform: rotateX(0) rotateY(90deg);
+		}
+		25% {
+			-webkit-transform: rotateX(0) rotateY(180deg);
+			transform: rotateX(0) rotateY(180deg);
+		}
+		47.5% {
+			-webkit-transform: rotateX(0) rotateY(270deg);
+			transform: rotateX(0) rotateY(270deg);
+		}
+		60% {
+			-webkit-transform: rotateX(90deg) rotateY(270deg);
+			transform: rotateX(90deg) rotateY(270deg);
+		}
+		72.5% {
+			-webkit-transform: rotateX(-50deg) rotateY(220deg);
+			transform: rotateX(-50deg) rotateY(220deg);
+		}
+		100% {
+			-webkit-transform: rotateX(-480deg) rotateY(220deg);
+			transform: rotateX(-480deg) rotateY(220deg);
+		}
+	}
+	/*魔方样式*/
+	
+	.cube {
+		position: relative;
+		font-size: 80px;
+		width: 2em;
+		height: 2em;
+		margin: 3.2em auto;
+		-webkit-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+		-webkit-transform: rotateX(-30deg) rotateY(30deg);
+		transform: rotateX(-30deg) rotateY(30deg);
+		-webkit-animation: cube 3s ease-in-out 0.5s infinite;
+	}
+	.cube > div {
+		position: absolute;
+		width: 2em;
+		height: 2em;
+		background: rgba(0, 0, 0, .6);
+		border: 1px solid #999;
+		color: white;
+		text-align: center;
+		/* line-height: 2em;*/
+	}
+	.front {
+		-webkit-transform: translateZ(1em);
+		transform: translateZ(1em);
+	}
+	.top {
+		-webkit-transform: rotateX(90deg) translateZ(1em);
+		transform: rotateX(90deg) translateZ(1em);
+	}
+	.right {
+		-webkit-transform: rotateY(90deg) translateZ(1em);
+		transform: rotateY(90deg) translateZ(1em);
+	}
+	.left {
+		-webkit-transform: rotateY(-90deg) translateZ(1em);
+		transform: rotateY(-90deg) translateZ(1em);
+	}
+	.bottom {
+		-webkit-transform: rotateX(-90deg) translateZ(1em);
+		transform: rotateX(-90deg) translateZ(1em);
+	}
+	.back {
+		-webkit-transform: rotateY(-180deg) translateZ(1em);
+		transform: rotateY(-180deg) translateZ(1em);
+	}
+	/*table样式*/
+	
+	.tb {
+		margin: 0;
+		width: 2em;
+		height: 2em;
+	}
+	.front td {
+		background-color: rgb(4, 150, 68);
+	}
+	.back td {
+		background-color: rgb(252, 200, 4);
+	}
+	.right td {
+		background-color: rgb(201, 45, 43);
+	}
+	.left td {
+		background-color: rgb(234, 90, 0);
+	}
+	.top td {
+		background-color: rgb(252, 254, 252);
+	}
+	.bottom td {
+		background-color: rgb(44, 109, 243);
+	}

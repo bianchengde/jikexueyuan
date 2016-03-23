@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>HRM</title>
+		<meta name="description" content="description">
+		<meta name="author" content="HRM">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="text/javascript" src="../plugins/jquery/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="../plugins/bootstrap/bootstrap.js"></script>
+		<script type="text/javascript" src="../plugins/select2/select2.min.js"></script>
+		<script type="text/javascript" src="../plugins/devoop/devoops.js"></script>
+		<link rel="stylesheet" href="../plugins/bootstrap/bootstrap.css" />
+		<link rel="stylesheet" href="../plugins/jquery/jquery-ui.min.css" />
+		<link rel="stylesheet" href="../plugins/select2/select2.css" />
+		<link rel="stylesheet" href="../plugins/font-awesome-4.2.0/css/font-awesome.css" />
+		<link rel="stylesheet" href="../css/style_v2.css" />
+		<style type="text/css">
+			.imgsmall {
+				width: 140px;
+			}
+			.panelMenuPosition {
+				margin-left: 72%;
+			}
+			.sidebar-left {
+				min-width: 230px;
+			}
+			.logo {
+				min-width: 224px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--Header-->
+		<header class="navbar">
+			<div class="container-fluid expanded-panel">
+				<div class="row">
+					<div id="logo" class="  col-xs-12 col-md-12 col-lg-2 title_background">
+						<a class="homepage"><img src="../img/hrm.png" id="imgScreen" alt="avatar" style="margin-top: 20px; width: 150px;" /></a>
+					</div>
+					<div id="top-panel" class="col-xs-12  col-md-12 col-lg-10">
+						<div class="row">
+							<div class="col-xs-4  col-xs-offset-8 col-sm-10 col-sm-offset-8 col-md-10 col-md-offset-9" id="buttonScreen" style="margin-top: 15px;">
+								<ul class="nav navbar-nav panel-menu">
+									<li>
+										<a class="_cursor">
+											<i class="fa fa-comment"></i>
+										</a>
+									</li>
+									<li>
+										<a class="_cursor">
+											<i class="fa fa-home"></i>
+										</a>
+									</li>
+									<li>
+										<a class="_cursor">
+											<i class="fa fa-question"></i>
+										</a>
+									</li>
+									<li>
+										<a class="_cursor">
+											<i class="fa fa-refresh"></i>
+										</a>
+									</li>
+									<li class="hidden-xs">
+										<a class="_cursor" href="login.html">
+											<i class="fa fa-power-off"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--End Header-->
+		<!--Start Container-->
+		<div id="main" class="container-fluid">
+			<div class="row">
+				<div id="sidebar-left" class="col-xs-2 col-sm-2">
+					<ul class="nav main-menu">
+						<li style="padding-bottom: 20px;border-bottom : 1px solid gray;">
+							<div class="person_postion">
+								<img id="headerpic" src="../img/dashboard/person.png" width="72px" alt="avatar" />
+								<div id="loginName" style="position:absolute;left:50%;top:-5%;width:50%;display:inline;color:white;">
+								</div>
+							</div>
+							<div style="margin-left: 110px;margin-top: -20px;">
+								<a class="person_icon_a"><i class="fa fa-lock person_icon" ></i></a>
+							</div>
+							<div style="margin-left: 140px;margin-top: -20px;">
+								<a class="person_icon_a"><i class="fa fa-pencil-square-o person_icon" ></i></a>
+							</div>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle">
+								<i class="fa fa-book"></i>
+								<span class="hidden-xs">人事管理</span>
+							</a>
+							<ul class="dropdown-menu">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle">
+										<span class="hidden-xs">假期管理</span>
+										<i class="fa fa-angle-double-down" style="padding-left: 40px;"></i>
+									</a>
+									<ul class="dropdown-menu">
+										<li><a href="javascript:void(0)"><span style="margin-left: 5%;">新增假期</span></a></li>
+										<li><a href="javascript:void(0)"><span style="margin-left: 5%;">假期列表</span></a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle">
+								<i class="fa fa-print"></i>
+								<span class="hidden-xs">考勤管理</span>
+							</a>
+							<ul class="dropdown-menu" style="display: block;">
+								<li><a href="javascript:void(0)">个人考勤查询</a></li>
+								<li><a href="javascript:void(0)">考勤数据导入</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle">
+								<i class="fa fa-mobile" style="font-size: 20px;"></i>
+								<span class="hidden-xs">请假管理</span>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="javascript:void(0)">销假审批</a></li>
+								<li><a href="javascript:void(0)">我的申请</a></li>
+								<li><a href="javascript:void(0)">请假申请</a></li>
+								<li><a href="javascript:void(0)">请假审批</a></li>
+								<li><a href="javascript:void(0)">题库管理</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle">
+								<i class="fa fa-pencil-square-o"></i>
+								<span class="hidden-xs">加班管理</span>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="javascript:void(0)">加班申请</a></li>
+								<li><a href="javascript:void(0)">我的加班</a></li>
+								<li><a href="javascript:void(0)">加班审批</a></li>
+								<li><a href="javascript:void(0)">加班审批确认</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle">
+								<i class="fa fa-users"></i>
+								<span class="hidden-xs">员工管理</span>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="javascript:void(0)">个人信息编辑</a></li>
+								<li><a href="javascript:void(0)">个人密码修改</a></li>
+								<li><a href="javascript:void(0)">新增员工</a></li>
+								<li><a href="javascript:void(0)">员工列表</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle">
+								<i class="fa fa-desktop"></i>
+								<span class="hidden-xs">系统管理</span>
+							</a>
+							<ul class="dropdown-menu">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle">
+										<span class="hidden-xs">角色管理</span>
+										<i class="fa fa-angle-double-down" style="padding-left: 40px;"></i>
+									</a>
+									<ul class="dropdown-menu">
+										<li><a href="javascript:void(0)"><span style="margin-left: 5%;">新增角色</span></a></li>
+										<li><a href="javascript:void(0)"><span style="margin-left: 5%;">角色列表</span></a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle">
+										<span class="hidden-xs">权限管理</span>
+										<i class="fa fa-angle-double-down" style="padding-left: 40px;"></i>
+									</a>
+									<ul class="dropdown-menu">
+										<li><a href="javascript:void(0)"><span style="margin-left: 5%;">新增权限</span></a></li>
+										<li><a href="javascript:void(0)"><span style="margin-left: 5%;">权限列表</span></a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!--Start Content-->
+				<div id="content" class="col-xs-12 col-sm-10 col-md-10">
+					<div id="about">
+						<div class="about-inner">
+							
+						</div>
+					</div>
+					<div class="preloader">
+						<img src="../img/dashboard/devoops_getdata.gif" class="devoops-getdata" alt="preloader" />
+					</div>
+					<!--右边表格-->
+					<div id="ajax-contents">
+						<iframe id="centerRight" scrolling="no" style="width: 100%; " frameborder="0" src="vacation/to_vacation_query.html" height="792">
+						</iframe>
+						<div class="col-md-offset-4" style="color: #3B3A3F;font-size: 12px;font-family: arial;">All Content Copyright@2013 By ST Electronics (Wuxi) Co., Ltd.</div>
+					</div>
+					<!--右边表格End-->
+				</div>
+				<!--End Content-->
+			</div>
+		</div>
+		<!--End Container-->
+	</body>
+
+</html>

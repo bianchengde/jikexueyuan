@@ -1,0 +1,672 @@
+a {
+	text-decoration: none;
+}
+
+ul,
+li,
+dl,
+dt {
+	margin: 0;
+	padding: 0;
+}
+
+.clearfix:after {
+	content: '\20';
+	display: block;
+	height: 0;
+	clear: both;
+}
+
+.s-skin {
+	background-color: #404040;
+	background-image: url(../img/625.jpg);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	min-width: 1000px;
+	background-position: center 0;
+	background-repeat: no-repeat;
+	z-index: -10;
+}
+
+.nav a:hover {
+	zoom: 1;
+	color: #FFF;
+}
+
+.mnav {
+	color: #FFF;
+}
+
+.lb,
+.st {
+	color: #FFF;
+}
+
+.skin-weather {
+	background-image: url(../img/a7.png);
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.nav-left li {
+	margin-left: 10px;
+	float: left;
+}
+
+.nav-left li span {
+	color: #fff;
+	line-height: 32px;
+	font-size: 12px;
+}
+
+.nav-right li {
+	line-height: 32px;
+}
+
+.nav-title {
+	margin-right: 5px;
+}
+
+.top-wrap {
+	position: absolute;
+	z-index: -1;
+	min-width: 1000px;
+	width: 100%;
+	height: 32px;
+	border: none;
+	background: none;
+	background-image: linear-gradient(rgba(15, 25, 50, .3) 0, rgba(15, 25, 50, .3) 100%);
+}
+
+.s_btn {
+	background-position: -206px 0;
+	background-image: url(../img/skin_dark_btn.png);
+	border-bottom: transparent;
+	color: #333;
+	font-size: 14px;
+}
+
+.s_btn:hover {
+	background-color: #E2E2E2;
+	border-bottom: 1px solid #E2E2E2;
+}
+
+.changeBorder {
+	border-color: transparent transparent transparent transparent;
+}
+
+.s-wrap {
+	margin-top: 70px;
+	width: 100%;
+}
+
+.s-main {
+	margin: 0 auto;
+	width: 895px;
+	background-image: linear-gradient(rgba(255, 255, 255, .9) 0, rgba(255, 255, 255, .9) 100%) !important;
+}
+
+.s-mancard-main {
+	border-bottom: 1px solid #e9e9e9;
+}
+
+.s-mancard-main ul li {
+	float: left;
+	font-size: 14px;
+}
+
+.s-mancard-main ul li span {
+	display: inline-block;
+	width: 80px;
+	line-height: 40px;
+	cursor: pointer;
+}
+
+.s-mancard-main ul li:nth-child(1) span {
+	width: 124px;
+}
+
+.mine-icon {
+	margin: 11px 0 0 0;
+	width: 20px;
+	height: 18px;
+	background: url(../img/card_setts_fdb17359.png) no-repeat -15px 0;
+	display: inline-block;
+	zoom: 1;
+	vertical-align: top;
+}
+
+.mine-text {
+	display: inline-block;
+	zoom: 1;
+	vertical-align: top;
+}
+
+.s-mancard-main li span:hover {
+	color: #333 !important;
+	background: rgba(0, 0, 0, 0.1);
+	font-weight: bold;
+}
+
+.on {
+	color: #333 !important;
+	background: rgba(0, 0, 0, 0.1);
+	font-weight: bold;
+}
+
+.s-content-title {
+	vertical-align: middle;
+	height: 30px;
+	font-size: 14px;
+}
+
+.s-center-container {
+	width: 100%;
+}
+
+.s-content {
+	position: relative;
+	margin: 0 auto;
+	width: 844px;
+	overflow: hidden;
+}
+
+.s-content-title {
+	position: relative;
+	z-index: 0;
+	height: 30px;
+	width: 100%;
+	text-align: left;
+	font-size: 14px;
+	padding-bottom: 6px;
+	border-bottom-color: rgba(240, 240, 240, .9) !important;
+	line-height: 30px;
+	cursor: pointer;
+}
+
+.mine-title-icon {
+	position: relative;
+	z-index: 0;
+	font-size: 0;
+	height: 10px;
+	width: 10px;
+	margin-right: 6px;
+	display: inline-block;
+}
+
+.mine-title-icon em {
+	position: absolute;
+	top: 3px;
+	left: 0;
+	height: 0;
+	line-height: 0;
+	width: 0;
+	font-size: 0;
+	border: 5px dashed transparent;
+	border-top: 5px solid #666;
+}
+
+.s-setbar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 30px;
+	line-height: 30px;
+	z-index: 2;
+	font-size: 13px;
+	display: none;
+}
+
+.set-bar-content {
+	height: 100%;
+	text-align: right;
+	float: right;
+	margin: 0 auto;
+}
+
+.set-menu {
+	height: 100%;
+	text-align: right;
+}
+
+.set-menu >div {
+	display: inline-block;
+	zoom: 1;
+	vertical-align: middle;
+	cursor: pointer;
+	margin-left: 16px;
+	text-align: right;
+	padding-top: 2px;
+}
+
+.class-icon {
+	display: inline-block;
+	zoom: 1;
+	vertical-align: middle;
+	height: 14px;
+	width: 14px;
+	margin-right: 7px;
+	font-size: 0;
+	background: url(../img/setIcon.png) no-repeat -50px -13px;
+	text-align: right;
+}
+
+.class-text {
+	display: inline-block;
+	zoom: 1;
+	vertical-align: middle;
+	height: 30px;
+	line-height: 29px;
+	outline: none;
+}
+
+.s-content-title:hover .s-setbar {
+	display: block;
+}
+
+.toTop {
+	color: rgb(153, 153, 153);
+}
+
+.set-menu div:hover {
+	color: #389CFF;
+}
+
+.s-content-center {
+	background: none;
+	border-top: 0;
+	text-align: left;
+	position: relative;
+	width: 850px;
+	padding-bottom: 15px;
+	font-size: 14px;
+	border-color: rgba(240, 240, 240, .9) !important;
+}
+
+.s-content-center dl {
+	position: relative;
+}
+
+.s-opacity-blank {
+	width: 100%;
+	margin-top: -1px;
+	overflow: hidden;
+}
+
+.s-opacity-blank a {
+	color: #333;
+	font-size: 16px;
+}
+
+.dir-content {
+	margin-left: 67px;
+}
+
+.dir-content a {
+	display: block;
+	height: 42px;
+	width: 143px;
+	border: 1px solid transparent;
+	text-decoration: none;
+	color: #333;
+}
+
+.dir-content a img {
+	margin-bottom: 12px;
+}
+
+.dir-content a div {
+	line-height: 41px;
+	height: 41px;
+	width: 91px;
+	overflow: hidden;
+	margin-left: 5px;
+	text-align: left;
+	display: inline-block;
+}
+
+.dir-content a div span {
+	max-width: 100%;
+	height: 100%;
+	float: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.dir-name {
+	position: absolute;
+	top: 12px;
+	font-size: 14px;
+}
+
+.s-opacity-blank dd {
+	float: left;
+}
+
+.s-news-right {
+	position: absolute;
+	top: 0px;
+	right: 5px;
+	width: 300px;
+	margin-top: 20px;
+	text-align: left;
+}
+
+.s-news-right-title {
+	height: 30px;
+	width: 270px;
+	border-bottom-color: rgba(233, 233, 233, .9) !important;
+}
+
+.title-text {
+	float: left;
+	height: 22px;
+	width: 94px;
+	padding-top: 3px;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: left;
+}
+
+.title-text a {
+	text-decoration: none;
+	color: #333;
+}
+
+.hot-refresh {
+	display: block;
+	float: right;
+	height: 22px;
+	padding-top: 3px;
+	width: 66px;
+	cursor: pointer;
+}
+
+.hot-refresh-icon {
+	display: inline-block;
+	width: 20px;
+	height: 16px;
+	background: url(../img/baiduicon16.png) -23px -25px no-repeat;
+	vertical-align: bottom;
+}
+
+.hot-refresh-text {
+	display: inline-block;
+	font-size: 13px;
+	width: 40px;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.s-news-right-content {
+	position: relative;
+	list-style: disc;
+}
+
+.s-news-right-content li {
+	width: 145px;
+	margin-right: 3px;
+	display: inline-block;
+	zoom: 1;
+	list-style: square;
+	margin-top: 10px;
+}
+
+.new-identity {
+	display: inline-block;
+	height: 20px;
+	width: 17px;
+	margin-left: 5px;
+	background: url(../img/baiduicon16.png) 0 -98px no-repeat;
+}
+
+.s-news-list-wrapper {
+	padding-top: 0;
+	float: left;
+	text-align: left;
+	width: 538px;
+}
+
+.s-news-item {
+	border-top: 0;
+	min-height: 146px;
+	overflow: visible;
+	position: relative;
+}
+
+.s-text-content {
+	width: 335px;
+	height: 96px;
+	font-size: 13px;
+	color: #999;
+	display: inline-block;
+	zoom: 1;
+	vertical-align: top;
+	margin-top: 20px;
+}
+
+.s-text-content h2 {
+	position: relative;
+	margin-top: -3px;
+}
+
+.s-text-content h2 a {
+	line-height: 26px;
+	display: inline;
+	color: #333;
+	font-weight: bold;
+}
+
+.prefix {
+	background: url(../img/baiduicon16.png) -20px -100px no-repeat;
+	height: 16px;
+	width: 16px;
+	font-size: 0;
+	margin-right: 5px;
+	margin-top: -4px;
+	display: inline-block;
+}
+
+.s-pic-content {
+	width: 176px;
+	zoom: 1;
+	position: relative;
+	display: inline-block;
+}
+
+.s-pic-content li {
+	display: inline-block;
+	zoom: 1;
+	height: 106px;
+	width: 176px;
+	overflow: hidden;
+	margin-top: 20px;
+}
+
+.s-pic-content img {
+	height: 106px;
+	width: 176px;
+	background: url(../img/news1.jpg);
+}
+
+.news-flash-tips {
+	width: 100%;
+	height: 38px;
+	text-align: left;
+}
+
+.news-meta-item span a {
+	color: #333;
+	font-size: 14px;
+}
+
+.left-line {
+	display: inline-block;
+	height: 0;
+	width: 172px;
+	font-size: 0;
+	border-bottom: 1px solid #e2e2e2;
+	margin-top: 21px;
+}
+
+.tips-content {
+	display: inline-block;
+	width: 187px;
+	padding-top: 21px;
+	margin: 0 auto;
+}
+
+.tips-icon {
+	display: inline-block;
+	height: 14px;
+	width: 12px;
+	margin: 0 6px 0 6px;
+	background: url(../img/baiduicon16.png) no-repeat -45px -1px;
+}
+
+.tips-content span {
+	font-size: 13px;
+	color: rgba(0, 0, 0, .4);
+}
+
+.cp {
+	background-color: #3388FF;
+	color: white;
+	margin-left: 25px;
+	text-decoration: none;
+	font-size: 12px;
+	display: inline-block;
+	text-align: center;
+	width: 86px;
+	height: 31px;
+	padding: 0;
+	font-size: 13px;
+}
+
+.top_feed {
+	visibility: hidden;
+	position: fixed;
+	left: 50%;
+	margin-left: 447px;
+	top: 613px;
+	width: 51px;
+}
+
+.toTop-icon {
+	display: block;
+	height: 17px;
+	width: 33px;
+	margin: 0 auto;
+	background: url(../img/topfed.png) no-repeat -1px -10px;
+}
+
+.s-top-wrap {
+	visibility: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 74px;
+	z-index: 10;
+	width: 100%;
+	min-width: 1000px;
+	border-bottom: 1px solid #ebebeb;
+}
+
+.s-center-box {
+	box-shadow: 0 0 5px #888;
+	background-image: linear-gradient(rgba(255, 255, 255, .95) 0, rgba(255, 255, 255, .95) 100%) !important;
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+}
+
+.head-wrap {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 50px;
+	min-height: 50px;
+	z-index: 20;
+	width: 802px;
+	padding-top: 9px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.s_form {
+	min-width: 550px;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	padding-left: 0;
+	min-height: 0;
+	z-index: 100;
+}
+
+.s_form a img {
+	width: 101px;
+	border: 0;
+}
+
+.fm {
+	position: relative;
+	margin: 8px 0 0 25px;
+	display: inline-block;
+}
+
+.fm_input {
+	width: 521px;
+	height: 20px;
+	padding: 9px 7px;
+	font: 16px arial;
+	border: 1px solid #b8b8b8;
+	border-bottom: 1px solid #ccc;
+	border-right: 0;
+	vertical-align: top;
+	outline: none;
+	box-shadow: none;
+	margin: 0;
+}
+
+.btn_wr {
+	width: 102px;
+	height: 38px;
+	border: 1px solid #38f;
+	border-bottom: 1px solid #2e7ae5;
+	background-color: #38f;
+	display: inline-block;
+	background: url(../img/skin_dark_btn.png) -287px -41px;
+	margin-left: -2px;
+}
+
+.self-btn {
+	cursor: pointer;
+	width: 102px;
+	height: 38px;
+	line-height: 38px;
+	padding: 0;
+	border: 0;
+	background: none;
+	background-color: #38f;
+	font-size: 16px;
+	color: white;
+	box-shadow: none;
+	font-weight: normal;
+}
+
+.footer {
+	position: static;
+	margin-top: 50px;
+}
+
+.classed {
+	background: url(../img/setIcon.png) no-repeat -68px -13px !important;
+}

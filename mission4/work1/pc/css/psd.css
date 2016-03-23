@@ -1,0 +1,387 @@
+<style type="text/css">
+/*公共元素*/ 
+html {
+	margin: 0;
+	padding: 0;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+}
+h4 {
+	font-size: 14px;
+}
+ul,
+ol {
+	padding: 0;
+}
+li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.fr {
+	float: right;
+}
+.fl {
+	float: left;
+}
+/*公共元素End*/ 
+/*头部*/
+.header {} .h-top {
+	height: 34px;
+	line-height: 34px;
+	overflow: hidden;
+	color: #b3b3b3;
+}
+.h-top-nav {
+	width: 960px;
+	margin: 0 auto;
+}
+.h-top-nav a {
+	text-decoration: none;
+	color: #b3b3b3;
+	font-size: 12px;
+	font-family: "宋体";
+	padding: 0 5px;
+}
+.h-top-nav select {
+	color: #b3b3b3;
+	margin-top: 8px;
+	margin-right: 20px;
+}
+.h-mid {
+	height: 62px;
+}
+.h-mid-nav {
+	width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+	/*display: table-cell;
+				vertical-align: middle;*/
+}
+.phone {
+	margin-top: 38px;
+	font-size: 14px;
+	color: #8e8e8e;
+	padding-right: 20px;
+}
+.phone em {
+	font-size: 26px;
+	color: #9c7553;
+	font-family: "Times New Roman";
+	line-height: 26px;
+	padding-left: 5px;
+}
+.bottom-nav {
+	width: 960px;
+	height: 20px;
+	margin: 0 auto;
+}
+.h-bottom ul {
+	list-style-type: disc;
+	font-size: 14px;
+	font-weight: bold;
+	font-family: "Microsoft Yahei";
+	display: block;
+}
+.h-bottom ul li {
+	float: left;
+	display: inline-block;
+	list-style: none;
+	text-align: -webkit-match-parent;
+}
+.h-bottom li a {
+	line-height: 35px;
+	display: inline-block;
+	color: #9c9c9c;
+	zoom: 1;
+	padding: 0 10px;
+	margin: 0 5px;
+	text-decoration: none;
+}
+.h-bottom li a:hover {
+	text-decoration: underline;
+	color: #B89C71;
+}
+.h-bottom .bg {
+	padding-left: 68px;
+	background: url(title2.gif) no-repeat right center;
+}
+.h-bottom img {
+	margin-top: 6px;
+	margin-left: 27px;
+	margin-right: 15px;
+}
+/*头部End*/
+/*正文*/
+.article {
+	width: 100%;
+}
+.banner {
+	width: 100%;
+	position: relative;
+	overflow: auto;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.banner li {
+	list-style: none;
+}
+.banner ul li {
+	min-width: 960px;
+	float: left;
+}
+.banner .dots {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 20px;
+}
+.banner .dots li {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin: 0 4px;
+	text-indent: -999em;
+	border: 2px solid #fff;
+	border-radius: 6px;
+	cursor: pointer;
+	opacity: .4;
+	-webkit-transition: background .5s, opacity .5s;
+	-moz-transition: background .5s, opacity .5s;
+	transition: background .5s, opacity .5s;
+}
+#b04 .dots li.active {
+	background: #fff;
+	opacity: 1;
+}
+.mid-nav {
+	min-width: 960px;
+	font-size: 12px;
+	width: 100%;
+	height: 79px;
+	background-color: #f8f6f2;
+	font-family: "微软雅黑";
+}
+.mid-nav a {
+	padding: 0 14px;
+	color: #555;
+	text-decoration: none;
+}
+.keyword {
+	width: 520px;
+	line-height: 79px;
+	overflow: hidden;
+	display: inline;
+	color: #555;
+	padding-left: 65px;
+}
+.content {
+	width: 960px;
+	margin: 0 auto;
+}
+.search {
+	margin-top: 17px;
+	width: 283px;
+	height: 39px;
+	background: url(../img/search.gif);
+}
+.search .input {
+	width: 220px;
+	height: 39px;
+	line-height: 39px;
+	padding: 0 1px 0 18px;
+	outline: none;
+}
+.search input {
+	display: inline-block;
+	float: left;
+	background: none;
+	border: none;
+	font-family: "Microsoft Yahei";
+}
+.search .button {
+	width: 44px;
+	height: 39px;
+	cursor: pointer;
+	/*border: 0;*/
+}
+.sce {
+	width: 960px;
+	margin: 0 auto;
+	text-align: center;
+}
+.sce .pic1 {
+	width: 100%;
+	margin: 15px auto;
+}
+.sce .pic2 {
+	width: 100%;
+	margin: 15px auto;
+}
+.sce ul {
+	zoom: 1;
+	overflow: hidden;
+	font-family: "Microsoft Yahei";
+	padding: 20px 0 0 40px;
+}
+.sce li {
+	float: left;
+	width: 277px;
+	margin: 0 29px 13px 0;
+}
+.sce li h4 {
+	background: url(../img/dian.gif) no-repeat 10px 8px;
+	border-bottom: 1px dashed #adadad;
+	width: 220px;
+	margin: 24px auto 3px;
+	padding-bottom: 7px;
+}
+.sce li h4 a {
+	color: #9c7553;
+}
+.sce li p {
+	width: 220px;
+	margin: 0 auto;
+	color: #6a6a6a;
+	line-height: 28px;
+}
+.s-ban {
+	min-width: 960px;
+	font-family: "微软雅黑";
+	position: relative;
+	width: 100%;
+}
+.s-ban p {
+	position: absolute;
+	top: 120px;
+	right: 27px;
+	width: 270px;
+}
+.s-ban p a {
+	display: inline-block;
+	background: #bea783;
+	width: 112px;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	font-size: 14px;
+	float: left;
+}
+.s-ban p span {
+	display: inline-block;
+	border: 1px solid #bbbabe;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 10px 0 7px;
+	color: #fff;
+	font-size: 16px;
+	margin-left: 2px;
+}
+.pro {
+	min-width: 960px;
+	width: 100%;
+	height: 494px;
+	font-family: "微软雅黑";
+	background-color: #F8F6F2;
+}
+.p-m {
+	width: 960px;
+	margin: 0 auto;
+	padding-top: 33px;
+}
+.p-m li a {
+	text-decoration: none;
+}
+.p-m li :hover {
+	background-color: #BEA783;
+	color: white;
+}
+.p-tab {
+	height: 43px;
+	line-height: 41px;
+	text-align: center;
+	overflow: hidden;
+	padding: 30px 24% 0;
+}
+.p-tab li {
+	float: left;
+	width: 158px;
+	height: 43px;
+	margin-right: 2px;
+	display: inline-block;
+}
+.p-tab li a {
+	display: block;
+	border: 1px solid #bea783;
+	color: #adadad;
+	font-weight: bold;
+	font-size: 14px;
+}
+.p-list {
+	padding: 10px 0 0;
+	height: 264px;
+	width: 960px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.p-list li {
+	float: left;
+	margin-right: 11px;
+	display: inline-block;
+}
+.p-list li img {
+	border: 0;
+}
+/*页脚部分*/
+.f-wrap {
+	height: 359px;
+	background: url(img/f_wrap.jpg) repeat-x left top;
+	padding: 50px 0 0;
+	font-family: "Microsoft Yahei";
+}
+.footer {
+	width: 960px;
+	margin: 0 auto;
+}
+.link p a {
+	display: inline-block;
+	color: #fcfcfa;
+	line-height: 40px;
+	padding-right: 36px;
+}
+.more {
+	display: block;
+	background: #fff6e9;
+	width: 107px;
+	height: 17px;
+	line-height: 17px;
+	color: #9c7553;
+	font-weight: normal;
+	padding-left: 12px;
+	font-size: 12px;
+	margin-top: 10px;
+}
+.f-nav {
+	width: 270px;
+	padding-left: 100px;
+}
+.f-nav p a {
+	display: inline-block;
+	color: #fcfcfa;
+	line-height: 40px;
+	padding-right: 55px;
+}
+.f-cp ul {
+	color: #d7c2ad;
+}
+.f-cp li {
+	margin-bottom: 18px;
+}
+/*页脚部分END*/
+</style>

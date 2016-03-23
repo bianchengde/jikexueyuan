@@ -1,0 +1,4 @@
+访问前台首页:http://localhost:3000/news
+访问后台首页:http://localhost:3000/
+news.dat是数据库导出的数据
+http://blog.sina.com.cn/s/blog_89af328301010agb.html

@@ -1,0 +1,11 @@
+{"_id":{"$oid":"569a65bb727155f200ef8aaf"},"id":1.0,"newsTitle":"这三年“习式治国”让世界瞩目","newsImg":"/img/news1.jpg","newsType":1.0,"recommend":1.0,"newsContent":"由中国倡议成立、57国共同筹建的亚洲基础设施投资银行，将于16日至18日在北京举行开业仪式系列活动。"}
+{"_id":{"$oid":"569a65e8727155f200ef8ab0"},"id":2.0,"newsTitle":"JYP公司否认逼迫周子瑜道歉","newsImg":"/img/news2.jpg","newsType":1.0,"recommend":1,"newsContent":"周子瑜妈妈也火速飞往韩陪伴爱女，周妈妈噚昨日表明“希望事情快快落幕，让小女孩快乐的唱歌跳舞，谢"}
+{"_id":{"$oid":"569bc3ac5939ddb01fabe1fa"},"id":3,"newsTitle":"习近平在沙特媒体发表署名文章","newsContent":"我以中国国家副主席身份访问沙特，沙特国家建设欣欣向荣，人民热情好客，给我留下美好印象。","newsImg":"/img/news3.jpg","newsType":1,"recommend":1}
+{"_id":{"$oid":"569bc3c05939ddb01fabe1fb"},"id":4,"newsTitle":"天使投资人蔡文胜：什么是最佳商业模式","newsContent":"先后创立投资了4399、美图秀秀、暴风科技、58同城以及飞鱼科技等数十个项目，影响超过10亿人。","newsImg":"/img/news4.jpg","newsType":1,"recommend":0}
+{"_id":{"$oid":"569bdb5046894ad420ae4545"},"id":6,"newsTitle":"中国的外汇储备还能“烧多久”？","newsContent":"我在刚刚出版的《郎咸平说：你的投资机会在哪里》一书中，对中国的外汇储备这一问题有详尽的分析，现..","newsImg":"/img/news6.jpg","newsType":1,"recommend":0}
+{"_id":{"$oid":"569cd2c913c2b538186866e4"},"newsImg":"/img/news7.jpg","id":7.0,"newsType":1.0,"newsTitle":"菲方称飞机遭中国海军警告","newsContent":"菲一飞机在飞临中国南海中业岛时，收到两条自称为中国海军的警告广播信号。","recommend":0}
+{"_id":{"$oid":"569ce0c0d373ed2c148fb924"},"id":8,"newsTitle":"高额融资背后的焦虑，陆金所将要走向何方？","newsContent":"除B轮投资者之外，A轮投资者行使认购期权投资2.92亿美元，使此轮融资总规模达到12.16亿美元。","newsImg":"/img/news8.jpg","newsType":2,"recommend":1}
+{"_id":{"$oid":"569ce11f5b864430141ef39d"},"id":9,"newsTitle":"新金融巨头纷纷融资，”新三极”寡头隐现变数颇多","newsContent":"随着蚂蚁金服、陆金所、京东金融先后完成巨额融资，他们三者在各自的领域也树立起了自己强大的竞争壁","newsImg":"/img/news9.jpg","newsType":2,"recommend":1}
+{"_id":{"$oid":"569ce88f159b43641fb3b16a"},"id":10,"newsTitle":"软银为何偏爱投资视频网站？","newsContent":"投资PPTV算是软银继电商、社交之后，孙正义对视频领域的豪赌。","newsImg":"/img/news10.jpg","newsType":2,"recommend":1}
+{"_id":{"$oid":"569ce8af159b43641fb3b16b"},"id":11,"newsTitle":"高额票补、返点、大规模点映背后的影院发行博弈困局","newsContent":"发行困局：首周末几乎决定一部电影的生死，排片资源如何“锁定”。","newsImg":"/img/news11.jpg","newsType":2,"recommend":0}
+{"_id":{"$oid":"569ce8e0159b43641fb3b16c"},"id":12,"newsTitle":"苹果被验证的成功，三星也想要效仿","newsContent":"仿效苹果推出玫瑰金的版本，也证明三星同样渴求中国市场的认同。","newsImg":"/img/news12.jpg","newsType":2,"recommend":0}
