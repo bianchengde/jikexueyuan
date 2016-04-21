@@ -1,0 +1,7 @@
+/*加载条*/
+.loading-length {
+    width: 100%;
+    height: 2px;
+    @include gradient-horizontal-three-colors($start-color: #35b550, $mid-color: #8aca8c, $color-stop: 50%, $end-color: #2d85ca);
+}
+/*加载条 End*/

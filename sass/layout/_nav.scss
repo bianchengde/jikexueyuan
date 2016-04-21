@@ -1,0 +1,112 @@
+//顶部导航
+.nav {
+    width: 100%;
+    height: 42px;
+    border-bottom: 1px solid $border-gray;
+    box-shadow: rgba(0, 0, 0, .1) 0 1px 5px;
+}
+
+.nav__wrap {
+    height: 42px;
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.navbox {
+    width: 740px;
+}
+
+.navbox__link {
+    display: inline-block;
+    padding: 0 22px;
+    font-size: 14px;
+    line-height: 42px;
+}
+
+.navbox__link{
+    &:hover{
+        color: $base-green;
+    }
+}
+
+.navbox{
+    &:hover{
+        .navpanel{
+            display: block;
+        }
+    }
+}
+
+.navpanel {
+    display: none;
+    position: absolute;
+    top: 42px;
+    width: 100%;
+    height: 140px;
+    background: rgba(255, 255, 255, .97);
+    border: 1px solid $border-gray;
+    border-top: 0;
+    padding-left: 50px;
+    box-shadow: rgba(0, 0, 0, .1) 0 1px 5px;
+    z-index: 800;
+}
+
+.navpanel__item {
+    border-left: 1px solid #F7F7F7;
+    position: relative;
+    width: 120px;
+    margin-left: -1px;
+    border-right: 1px solid #F7F7F7;
+    padding-left: 15px;
+    padding-bottom: 14px;
+    height: 100%;
+}
+
+.navAngle {
+    background-image: url(http://s1.jikexueyuan.com/common/images/nav-angle_f7c86b6.png);
+    width: 12px;
+    height: 7px;
+    position: absolute;
+    background-size: 100% 100%;
+    top: -7px;
+    left: 54px;
+    display: none;
+}
+
+.item-box__link {
+    line-height: 29px;
+    display: block;
+    text-align: left;
+    font-size: $font-size;
+    color: #666;
+    width: auto;
+}
+
+.user-need {
+    height: 44px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    line-height: 44px;
+    font-size: $font-size;
+    overflow: hidden;
+}
+
+.user-need__text {
+    display: inline-block;
+}
+
+.user-need__link {
+    width: auto!important;
+    font-size: $font-size;
+}
+
+.user-need__link:hover {
+    color: $base-green;
+}
+
+.user-need__img {
+    margin-top: 14px;
+}
+//顶部导航  End
